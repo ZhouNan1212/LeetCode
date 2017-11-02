@@ -175,13 +175,29 @@ class Solution(object):
                 third_max = n
         return third_max if third_max is not None else first_max
 
+    def rotateV1(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        count = 0
+        while count < k:
+            nums.insert(0, nums.pop())
+            count += 1
 
-
+    def rotateV2(self, nums, k):
+        if not nums:
+            return nums
+        moves = k % len(nums)
+        tmp = nums[-moves:]
+        nums[moves:] = nums[:-moves]
+        nums[:moves] = tmp
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.thirdMax([3, 2, 1]))
+    print(s.rotateV2([1,2,3,4,5,6,7], 3))
 

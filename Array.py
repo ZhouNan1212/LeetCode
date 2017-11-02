@@ -130,9 +130,39 @@ class Solution(object):
             j += 1
         return j - i - 1
 
+    def findPairs(self, nums, k):  # Time Limit Exceeded 
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        pairs = 0
+        new_nums = list(set(copy.deepcopy(nums)))
+        if k > 0:
+            for first_index in range(len(new_nums) - 1):
+                for second_index in range(first_index, len(new_nums)):
+                    if abs(new_nums[first_index] - new_nums[second_index]) == k:
+                        pairs += 1
+        elif k == 0:
+            if len(new_nums) != len(nums):
+                elements_count = {}
+                for value in nums:
+                    if value in elements_count.keys():
+                        elements_count[value] += 1
+                    else:
+                        elements_count[value] = 1
+                return len([value for value in elements_count.values() if value > 1])
+        else:
+            pass
+        return pairs
+
+
+
+
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findUnsortedSubarrayV2([2, 6, 4, 8, 10, 9, 15]))
+    print(s.findPairs([1,1,1,2,2], 0))
 

@@ -130,7 +130,7 @@ class Solution(object):
             j += 1
         return j - i - 1
 
-    def findPairs(self, nums, k):  # Time Limit Exceeded 
+    def findPairsV1(self, nums, k):  # Time Limit Exceeded
         """
         :type nums: List[int]
         :type k: int

@@ -27,9 +27,25 @@ class Solution(object):
             nums[index] = left[index] * right[index]
         return nums
 
+    def combinationSum3(self, k, n):
+        ans = []
+
+        def search(start, cnt, sums, nums):
+            if cnt > k or sums > n:
+                return
+            if cnt == k and sums == n:
+                ans.append(nums)
+                return
+            for x in range(start + 1, 10):
+                search(x, cnt + 1, sums + x, nums + [x])
+        search(0, 0, 0, [])
+        return ans
+
+
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.productExceptSelf([1,2,3,4,5]))
+    print(s.combinationSum3(4, 10))

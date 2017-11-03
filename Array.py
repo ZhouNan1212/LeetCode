@@ -224,10 +224,23 @@ class Solution(object):
                 index += 1
         return len(nums)
 
+    def findDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        ans = []
+        for n in nums:
+            if nums[abs(n) - 1] < 0:
+                ans.append(abs(n))
+            else:
+                nums[abs(n) - 1] *= -1
+        return ans
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.checkPossibility([3, 4, 2, 3]))
+    print(s.findDuplicates([4,3,2,7,8,2,3,1]))
 

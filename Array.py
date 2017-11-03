@@ -224,7 +224,7 @@ class Solution(object):
                 index += 1
         return len(nums)
 
-    def findDuplicates(self, nums):
+    def findDuplicatesV1(self, nums):
         """
         :type nums: List[int]
         :rtype: List[int]
@@ -237,10 +237,40 @@ class Solution(object):
                 nums[abs(n) - 1] *= -1
         return ans
 
+    def findDuplicatesV2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        nums_set = set()  # without extra space???
+        dupe_list = []
+        for num in nums:
+            if num not in nums_set:
+                nums_set.add(num)
+            else:
+                dupe_list.append(num)
+        return dupe_list
+
+    def findPoisonedDuration(self, timeSeries, duration):
+        """
+        :type timeSeries: List[int]
+        :type duration: int
+        :rtype: int
+        """
+        total_time = 0
+        if len(timeSeries) == 0:
+            return total_time
+        else:
+            for index in range(len(timeSeries) - 1):
+                total_time += min(timeSeries[index + 1] - timeSeries[index], duration)
+            return total_time + duration
+
+
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findDuplicates([4,3,2,7,8,2,3,1]))
+    print(s.findPoisonedDuration([1, 2], 2))
 

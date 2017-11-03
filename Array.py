@@ -156,13 +156,78 @@ class Solution(object):
             pass
         return pairs
 
+    def thirdMax(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        那么我们用三个变量first, second, third来分别保存第一大，第二大，和第三大的数，
+        然后遍历数组，如果遍历到的数字大于当前第一大的数first，那么三个变量各自错位赋值，
+        如果当前数字大于second，小于first，那么就更新second和third，如果当前数字大于third，
+        小于second，那就只更新third.
+        """
+        first_max = second_max = third_max = None
+        for n in nums:
+            if n > first_max:
+                first_max, second_max, third_max = n, first_max, second_max
+            elif first_max > n > second_max:
+                second_max, third_max = n, second_max
+            elif second_max > n > third_max:
+                third_max = n
+        return third_max if third_max is not None else first_max
 
+    def rotateV1(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        count = 0
+        while count < k:
+            nums.insert(0, nums.pop())
+            count += 1
 
+    def rotateV2(self, nums, k):
+        if not nums:
+            return nums
+        moves = k % len(nums)
+        tmp = nums[-moves:]
+        nums[moves:] = nums[:-moves]
+        nums[:moves] = tmp
+
+    def checkPossibility(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        times = 0
+        for i in range(1, len(nums)):
+            if nums[i] < nums[i - 1]:
+                times += 1
+                if times == 2:
+                    return False
+                if i != 1 and i != len(nums) - 1:
+                    if nums[i - 1] > nums[i + 1] and nums[i] < nums[i - 2]:
+                        return False
+        return True
+
+    def removeElement(self, nums, val):
+        """
+        :type nums: List[int]
+        :type val: int
+        :rtype: int
+        """
+        index = 0
+        while index < len(nums):
+            if nums[index] == val:
+                del nums[index]
+            else:
+                index += 1
+        return len(nums)
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findPairs([1,1,1,2,2], 0))
+    print(s.checkPossibility([3, 4, 2, 3]))
 

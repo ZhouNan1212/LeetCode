@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Solution(object):
     def constructArray(self, n, k):
         """
@@ -57,9 +58,35 @@ class Solution(object):
             if slow == fast:
                 return slow
 
+    def findErrorNumsV1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        new_set = set()
+        duplicate, length = 0, len(nums)
+        nums_sum = (length * (1 + length)) / 2
+        for i in nums:
+            if i in new_set:
+                duplicate = i
+            else:
+                new_set.add(i)
+            nums_sum -= i
+        return [duplicate, nums_sum + duplicate]
+
+    def findErrorNumsV2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        # nums = [a1, a1, a3], 理论上应该是[a1, a2, a3]
+        n = len(nums)
+        alpha = sum(nums) - n * (n + 1) / 2  # a1 - a2
+        beta = (sum(map(lambda x: x * x, nums)) - n * (n + 1) * (2 * n + 1) / 6) / alpha  # a1 + a2
+        return [(alpha + beta) / 2, (beta - alpha) / 2]
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findDuplicate([1, 2, 3, 4, 4]))
+    print(s.findErrorNumsV2([1,2,2]))

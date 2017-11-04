@@ -85,8 +85,26 @@ class Solution(object):
         beta = (sum(map(lambda x: x * x, nums)) - n * (n + 1) * (2 * n + 1) / 6) / alpha  # a1 + a2
         return [(alpha + beta) / 2, (beta - alpha) / 2]
 
+    def singleNumberV1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        return 2 * reduce(lambda x, y: x + y, list(set(nums))) - reduce(lambda x, y: x + y, nums)
+
+    def singleNumberV2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        res = 0
+        for num in nums:
+            res ^= num
+            print res
+        return res
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findErrorNumsV2([1,2,2]))
+    print(s.singleNumberV2([-1,2,2,3,3]))

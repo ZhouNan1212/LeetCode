@@ -103,8 +103,49 @@ class Solution(object):
             print res
         return res
 
+    def firstMissingPositiveV1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        new_nums = list(set(filter(lambda x: x > 0, nums)))
+        if len(nums) == 0 or len(new_nums) == 0:
+            return 1
+        new_nums = zip(sorted(new_nums), range(1, len(new_nums) + 1))
+        re = None
+        for element in new_nums:
+            if element[0] != element[1]:
+                re = element[1]
+                break
+        if re is not None:
+            return re
+        else:
+            return new_nums[-1][1] + 1
+
+    def firstMissingPositiveV2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if nums == []: return 1
+        nums.sort()
+        nums = [i for i in nums if (i >= 0)]
+        if nums[0] > 1:
+            return 1
+        for i in range(0, len(nums) - 1):
+            if nums[i] + 1 != nums[i + 1] and nums[i] != nums[i + 1]:
+                return nums[i] + 1
+        return nums[len(nums) - 1] + 1
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.singleNumberV2([-1,2,2,3,3]))
+    print(s.firstMissingPositiveV1([0,2,2,1,1]))

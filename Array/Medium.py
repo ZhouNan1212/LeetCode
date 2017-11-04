@@ -41,11 +41,25 @@ class Solution(object):
         search(0, 0, 0, [])
         return ans
 
-
+    def findDuplicate(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        slow, fast = 0, 0
+        while True:
+            slow, fast = nums[slow], nums[nums[fast]]
+            if slow == fast:
+                break
+        fast = 0
+        while True:
+            slow, fast = nums[slow], nums[fast]
+            if slow == fast:
+                return slow
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.combinationSum3(4, 10))
+    print(s.findDuplicate([1, 2, 3, 4, 4]))

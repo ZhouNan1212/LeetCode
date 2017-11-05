@@ -137,15 +137,30 @@ class Solution(object):
                 return nums[i] + 1
         return nums[len(nums) - 1] + 1
 
+    def subsetsV1(self, nums):  # 位运算
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        result = []
+        for i in range(1 << len(nums)):
+            subset = []
+            for j in range(len(nums)):
+                if i & 1 << j:
+                    subset.append(nums[j])
+            result.append(subset)
+        return result
 
-
-
-
-
+    def subsetsV2(self, nums):  # 回溯法
+        res = [[]]
+        for num in sorted(nums):
+            print res
+            res += [item + [num] for item in res]
+        return res
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.firstMissingPositiveV1([0,2,2,1,1]))
+    print(s.subsetsV2([1, 2, 3]))

@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+from scipy.special import comb
+from math import factorial
+
 class Solution(object):
     def constructArray(self, n, k):
         """
@@ -158,9 +161,50 @@ class Solution(object):
             res += [item + [num] for item in res]
         return res
 
+    def sortedNums(self, nums):
+        return sorted(nums)
+
+    def zipNums(self, nums):
+        return zip(nums, nums[1:], nums[2:])
+
+    def judgeTriangle(self, nums):
+        return filter(lambda element: element[0] + element[1] > element[2], nums)
+
+    def triangleNumberV0(self, nums):  # 可以找出不重复的三角形个数
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        return len(self.judgeTriangle(self.zipNums(self.sortedNums(nums))))
+
+    def uniquePathsV1(self, m, n):
+        """
+        :type m: int
+        :type n: int
+        :rtype: int
+        """
+        return int(factorial(m + n - 2) / (factorial(m - 1) * factorial(n - 1)))  # m个a和n个b的组合，(m+n)!/m!n!
+
+    def uniquePathsV2(self, m, n):
+        """
+        :type m: int
+        :type n: int
+        :rtype: int
+        """
+        num = [1] * min(m, n)
+        t = max(m, n)
+        l = len(num)
+        for i in range(t - 1):
+            for j in range(1, l):
+                num[j] = num[j] + num[j - 1]
+        return num.pop()
+
+
+
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.subsetsV2([1, 2, 3]))
+    print(s.triangleNumberV1([2,2,3,3,3,4]))

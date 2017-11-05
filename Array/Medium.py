@@ -223,12 +223,34 @@ class Solution(object):
                 right = mid
         return nums[left]
 
-
-
-
+    def subarraySum(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        index, count = 0, 0
+        subarray_sum = nums[index]
+        while index < len(nums) - 1:
+            if nums[index] == k:
+                count += 1
+                index += 1
+                subarray_sum = nums[index]
+            else:
+                if subarray_sum + nums[index + 1] < k:
+                    subarray_sum += nums[index + 1]
+                    index += 1
+                elif subarray_sum + nums[index + 1] == k:
+                    subarray_sum = nums[index + 1]
+                    index += 1
+                    count += 1
+                else:
+                    subarray_sum = nums[index + 1]
+                    index += 1
+        return count
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findMin([2,2,3,3,3,4]))
+    print(s.subarraySum([-1, -1, 1], 0))

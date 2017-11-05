@@ -199,6 +199,30 @@ class Solution(object):
                 num[j] = num[j] + num[j - 1]
         return num.pop()
 
+    def findMinV1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        return reduce(lambda x, y: min(x, y), nums)
+
+    def findMinV2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        left = 0
+        right = len(nums) - 1
+        while left < right:
+            mid = (left + right) / 2
+            # if the middle is bigger than last val, smallest is on right side
+            if nums[mid] > nums[right]:
+                left = mid + 1
+            # else it could be the curr index or to the left
+            else:
+                right = mid
+        return nums[left]
+
 
 
 
@@ -207,4 +231,4 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.triangleNumberV1([2,2,3,3,3,4]))
+    print(s.findMin([2,2,3,3,3,4]))

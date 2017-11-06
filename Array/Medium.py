@@ -293,6 +293,20 @@ class Solution(object):
                 count2 += 1
                 index += 1
 
+    def minPathSum(self, grid):
+        """
+        :type grid: List[List[int]]
+        :rtype: int
+        """
+        dp = [0] * len(grid)
+        dp[0] = grid[0][0]
+        for i in range(1, len(grid)):
+            dp[i] = dp[i - 1] + grid[i][0]
+        for j in range(1, len(grid[0])):
+            for i in range(len(grid)):
+                dp[i] = min(dp[i], dp[i - 1]) + grid[i][j] if i > 0 else dp[i] + grid[i][j]
+        return dp[len(grid) - 1]
+
 
 
 
@@ -300,9 +314,7 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    nums = [1, 0]
-    print(s.sortColors(nums))
-    print nums
+    print(s.minPathSum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]))
 
 
 

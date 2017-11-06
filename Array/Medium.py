@@ -356,6 +356,40 @@ class Solution(object):
             prev, curr = curr, max(prev + nums[i], curr)
         return curr
 
+    def countBitsV1(self, num):  # Time Limit Exceeded
+        """
+        :type num: int
+        :rtype: List[int]
+        """
+        result = []
+        for i in range(num + 1):
+            each_number = 0
+            for j in range(num):
+                if i & 1 << j:
+                    each_number += 1
+            result.append(each_number)
+        return result
+
+    def countBitsV2(self, num):
+        re = [0] * (num + 1)
+        for i in range(1, num + 1):
+            re[i] = re[i & (i - 1)] + 1
+        return re
+
+    def countBitsV3(self, num):
+        """
+        :type num: int
+        :rtype: List[int]
+        """
+        result = [0]
+        k = 0
+        while 2**k <= num:
+            print [n + 1 for n in result]
+            result += [n + 1 for n in result]
+            k += 1
+        return result[:num+1]
+
+
 
 class NumArrayV1(object):
     def __init__(self, nums):
@@ -416,7 +450,7 @@ if __name__ == '__main__':
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
     obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     param_1 = obj.sumRange(2, 5)
-    print(param_1)
+    print(s.countBitsV3(2))
 
 
 

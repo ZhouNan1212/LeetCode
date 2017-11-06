@@ -196,7 +196,7 @@ class Solution(object):
         l = len(num)
         for i in range(t - 1):
             for j in range(1, l):
-                num[j] = num[j] + num[j - 1]
+                num[j] += num[j - 1]
         return num.pop()
 
     def findMinV1(self, nums):
@@ -307,6 +307,27 @@ class Solution(object):
                 dp[i] = min(dp[i], dp[i - 1]) + grid[i][j] if i > 0 else dp[i] + grid[i][j]
         return dp[len(grid) - 1]
 
+    def climbStairsV1(self, n):  # 递归
+        """
+        :type n: int
+        :rtype: int
+        """
+        res = []
+        if n <= 1:
+            return 1
+        res.extend([1, 1])
+        for i in range(2, n + 1):
+            res.append(res[-1] + res[-2])
+        return res[-1]
+
+    def climbStairsV2(self, n):  # 迭代
+        onestep, twostep = 1, 1
+        while n > 0:
+            twostep += onestep
+            onestep = twostep - onestep
+            n -= 1
+        return onestep
+
 
 
 
@@ -314,7 +335,7 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.minPathSum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]))
+    print(s.climbStairsV2(6))
 
 
 

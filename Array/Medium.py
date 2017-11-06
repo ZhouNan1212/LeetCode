@@ -277,7 +277,21 @@ class Solution(object):
                 return int("".join(str_num))
         return num
 
-
+    def sortColors(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        count = {0: 0, 1: 0, 2: 0}
+        for value in nums:
+            count[value] += 1
+        index = 0
+        for key in count.keys():
+            count2 = 0
+            while count2 < count[key]:
+                nums[index] = key
+                count2 += 1
+                index += 1
 
 
 
@@ -286,7 +300,9 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.maximumSwap(9973))
+    nums = [1, 0]
+    print(s.sortColors(nums))
+    print nums
 
 
 

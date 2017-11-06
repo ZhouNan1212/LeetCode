@@ -229,28 +229,75 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        index, count = 0, 0
-        subarray_sum = nums[index]
-        while index < len(nums) - 1:
-            if nums[index] == k:
-                count += 1
-                index += 1
-                subarray_sum = nums[index]
+        # unordered_map < int, int > hash;
+        # hash[0] = 1;
+        #
+        # int sum = 0;
+        # int count = 0;
+        # for (int i = 0; i < nums.size(); i++){
+        #     sum += nums[i];
+        #     if (hash.find(sum - k) != hash.end()) count += hash[sum -k];
+        #         hash[sum]++;
+        # }
+        # return count;
+        subarray_sum, cumulative_sum, res = {0: 1}, 0, 0
+        for index, value in enumerate(nums):
+            cumulative_sum += value
+            print cumulative_sum, subarray_sum, cumulative_sum - k
+            if cumulative_sum not in subarray_sum.keys():
+                subarray_sum[cumulative_sum] = index
             else:
-                if subarray_sum + nums[index + 1] < k:
-                    subarray_sum += nums[index + 1]
-                    index += 1
-                elif subarray_sum + nums[index + 1] == k:
-                    subarray_sum = nums[index + 1]
-                    index += 1
-                    count += 1
-                else:
-                    subarray_sum = nums[index + 1]
-                    index += 1
-        return count
+                subarray_sum[cumulative_sum] += 1
+            if cumulative_sum - k in subarray_sum.keys():
+                res += subarray_sum[cumulative_sum - k]
+            # if cumulative_sum not in subarray_sum.keys():
+            #     subarray_sum[cumulative_sum] = 1
+            # print subarray_sum, cumulative_sum - k, res
+            # if cumulative_sum == k:
+            #     res = index + 1
+            # elif cumulative_sum - k in subarray_sum.keys():
+            #     res = max(res, index - subarray_sum[cumulative_sum - k])
+            # print index - subarray_sum[cumulative_sum - k], "----------"
+        return res
+
+    def maximumSwap(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        str_num = list(str(num))
+        index = 0
+        for value in str_num:
+            max_number = filter(lambda x: str_num[x] == max(str_num[index:]) and x > index and str_num[x] > value, range(len(str_num)))
+            if len(max_number) == 0:
+                index += 1
+                continue
+            else:
+                str_num[index], str_num[max_number[-1]] = str_num[max_number[-1]], str_num[index]
+                return int("".join(str_num))
+        return num
+
+
+
+
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.subarraySum([-1, -1, 1], 0))
+    print(s.maximumSwap(9973))
+
+
+
+
+
+
+
+
+
+
+
+
+
+

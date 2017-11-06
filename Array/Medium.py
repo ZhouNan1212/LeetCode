@@ -328,6 +328,34 @@ class Solution(object):
             n -= 1
         return onestep
 
+    def robV1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        a, b = 0, 0
+        for i in range(len(nums)):
+            if i % 2 == 0:
+                a += nums[i]
+                a = max(a, b)
+            else:
+                b += nums[i]
+                b = max(a, b)
+        return max(a, b)
+
+    def robV2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if len(nums) <= 1:
+            return sum(nums)
+        prev, curr = 0, 0
+        for i in range(len(nums)):
+            print prev + nums[i]
+            prev, curr = curr, max(prev + nums[i], curr)
+        return curr
+
 
 
 
@@ -335,7 +363,7 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.climbStairsV2(6))
+    print(s.robV2([1,2,3,4,5]))
 
 
 

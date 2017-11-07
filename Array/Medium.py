@@ -356,13 +356,98 @@ class Solution(object):
             prev, curr = curr, max(prev + nums[i], curr)
         return curr
 
+    def countBitsV1(self, num):  # Time Limit Exceeded
+        """
+        :type num: int
+        :rtype: List[int]
+        """
+        result = []
+        for i in range(num + 1):
+            each_number = 0
+            for j in range(num):
+                if i & 1 << j:
+                    each_number += 1
+            result.append(each_number)
+        return result
+
+    def countBitsV2(self, num):
+        re = [0] * (num + 1)
+        for i in range(1, num + 1):
+            re[i] = re[i & (i - 1)] + 1
+        return re
+
+    def countBitsV3(self, num):
+        """
+        :type num: int
+        :rtype: List[int]
+        """
+        result = [0]
+        k = 0
+        while 2**k <= num:
+            print [n + 1 for n in result]
+            result += [n + 1 for n in result]
+            k += 1
+        return result[:num+1]
+
+
+
+class NumArrayV1(object):
+    def __init__(self, nums):
+        """
+        :type nums: List[int]
+        """
+        if nums is None:
+            self.sums = None
+        elif len(nums) == 0:
+            self.sums = []
+        else:
+            self.sums = [0] * len(nums)
+        for i in range(len(nums)):
+            self.sums[i] = self.sums[i - 1] + nums[i]
+            print nums[i], self.sums
+
+    def sumRange(self, i, j):
+        """
+        :type i: int
+        :type j: int
+        :rtype: int
+        """
+        sums = self.sums
+        print sums
+        if sums is None:
+            return 0
+        if i >= len(sums) or j >= len(sums) or i > j:
+            return 0
+        elif i == 0:
+            return sums[j]
+        else:
+            return sums[j] - sums[i - 1]
+
+class NumArrayV2(object):
+    def __init__(self, nums):
+        """
+        initialize your data structure here.
+        :type nums: List[int]
+        """
+        self.accu = [0]
+        for num in nums:
+            self.accu += self.accu[-1] + num,
+
+    def sumRange(self, i, j):
+        """
+        sum of elements nums[i..j], inclusive.
+        :type i: int
+        :type j: int
+        :rtype: int
+        """
+        return self.accu[j + 1] - self.accu[i]
 
 if __name__ == '__main__':
     s = Solution()
-    #print(s.getRowV2(3))
-    #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    #print(s.robV2([1,2,3,4,5]))
-
+    #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
+    obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
+    param_1 = obj.sumRange(2, 5)
+    print(s.countBitsV3(2))
 
 
 

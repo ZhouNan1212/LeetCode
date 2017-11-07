@@ -357,13 +357,12 @@ class Solution(object):
         return curr
 
 
-
-
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.robV2([1,2,3,4,5]))
+    #print(s.robV2([1,2,3,4,5]))
+
 
 
 

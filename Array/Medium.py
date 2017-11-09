@@ -442,11 +442,8 @@ class NumArrayV2(object):
         """
         return self.accu[j + 1] - self.accu[i]
 
-
-
 if __name__ == '__main__':
     s = Solution()
-    #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
     obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     param_1 = obj.sumRange(2, 5)

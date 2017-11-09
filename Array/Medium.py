@@ -451,17 +451,3 @@ if __name__ == '__main__':
     obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     param_1 = obj.sumRange(2, 5)
     print(s.countBitsV3(2))
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -389,6 +389,31 @@ class Solution(object):
             k += 1
         return result[:num+1]
 
+    def rotateV1(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: void Do not return anything, modify matrix in-place instead.
+        """
+        for i in range(len(matrix)):
+            for j in range(i, len(matrix[0])):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        for i in range(len(matrix)):
+            matrix[i].reverse()
+
+    def rotateV2(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: void Do not return anything, modify matrix in-place instead.
+        """
+        if not matrix:
+            return
+        m = len(matrix)
+        for i in xrange(m):
+            for j in xrange(i):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+        for i in xrange(m):
+            for j in xrange(m / 2):
+                matrix[i][j], matrix[i][m - j - 1] = matrix[i][m - j - 1], matrix[i][j]
 
 
 class NumArrayV1(object):
@@ -445,6 +470,9 @@ class NumArrayV2(object):
 if __name__ == '__main__':
     s = Solution()
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
-    obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
-    param_1 = obj.sumRange(2, 5)
-    print(s.countBitsV3(2))
+    # obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
+    # param_1 = obj.sumRange(2, 5)
+    print(s.rotateV1([[1,2,3],
+  [4,5,6],
+  [7,8,9]
+]))

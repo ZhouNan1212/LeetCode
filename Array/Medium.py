@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from scipy.special import comb
 from math import factorial
+import string
 
 class Solution(object):
     def constructArray(self, n, k):
@@ -442,6 +442,44 @@ class Solution(object):
                 length += 1
         return length
 
+    def isPalindromeV1(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        first, last = 0, len(s) - 1
+        while first <= last:
+            while first <= last and (s[first].isalpha() is False and s[first].isdigit() is False):
+                first += 1
+            while first <= last and (s[last].isalpha() is False and s[last].isdigit() is False):
+                last -= 1
+            if first > last:
+                return True
+            if s[first].lower() != s[last].lower():
+                return False
+            else:
+                first += 1
+                last -= 1
+        return True
+
+    def isPalindromeV2(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        sn = s.encode('utf-8').translate(None, string.punctuation + ' ').lower()
+        # s.translate(table,str) 对字符串s移除str包含的字符，剩下的字符串按照table里的字符映射关系替换。table可以理解为转换表，比较'a' -> 'A', 'b'->'B'.
+        # string.punctuation,标点：'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+        return sn == sn[::-1]
+
+    def isPalindromeV3(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        s = filter(str.isalnum, str(s)).lower()
+        return s == s[::-1]
+
 
 class NumArrayV1(object):
     def __init__(self, nums):
@@ -500,4 +538,4 @@ if __name__ == '__main__':
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
     # obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     # param_1 = obj.sumRange(2, 5)
-    print(s.removeDuplicates([1,2,2,2]))
+    print(s.isPalindrome("0p"))

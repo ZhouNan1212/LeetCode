@@ -480,6 +480,54 @@ class Solution(object):
         s = filter(str.isalnum, str(s)).lower()
         return s == s[::-1]
 
+    def setZeroesV1(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: void Do not return anything, modify matrix in-place instead.
+        """
+        zero_row, zero_column, column_length = [], [], len(matrix[0])
+        for row_index, row in enumerate(matrix):
+            each_column = filter(lambda x: row[x] == 0, range(len(row)))
+            if len(each_column) != 0:
+                zero_column.extend(each_column)
+                zero_row.append(row_index)
+        zero_row, zero_column = list(set(zero_row)), list(set(zero_column))
+        for row_index, row in enumerate(matrix):
+            if row_index in zero_row:
+                matrix[row_index] = [0] * column_length
+            else:
+                for column_index, value in enumerate(row):
+                    if column_index in zero_column:
+                        matrix[row_index][column_index] = 0
+
+    def setZeroesV2(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: void Do not return anything, modify matrix in-place instead.
+        """
+        row_zero = []
+        col_zero = []
+        for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
+                if matrix[i][j] == 0:
+                    if i not in row_zero: row_zero.append(i)
+                    if j not in col_zero: col_zero.append(j)
+
+        for i in row_zero:
+            matrix[i] = [0]*len(matrix[0])
+        for i in range(len(matrix)):
+            if i not in row_zero:
+                for j in col_zero:
+                    matrix[i][j] = 0
+        return None
+
+
+
+
+
+
+
+
 
 class NumArrayV1(object):
     def __init__(self, nums):
@@ -538,4 +586,4 @@ if __name__ == '__main__':
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
     # obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     # param_1 = obj.sumRange(2, 5)
-    print(s.isPalindrome("0p"))
+    print(s.setZeroes([[0,0,0,5],[4,3,1,4],[0,1,1,4],[1,2,1,3],[0,0,1,1]]))

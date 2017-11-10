@@ -521,6 +521,33 @@ class Solution(object):
                     matrix[i][j] = 0
         return None
 
+    def subsetsWithDupV1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        result = []
+        for i in range(1 << len(nums)):
+            subset = []
+            for j in range(len(nums)):
+                if i & 1 << j:
+                    subset.append(nums[j])
+            subset = sorted(subset)
+            if subset not in result:
+                result.append(subset)
+        return result
+
+    def subsetsWithDupV2(self, S):
+        res = [[]]
+        S.sort()
+        for i in range(len(S)):
+            if i == 0 or S[i] != S[i - 1]:
+                l = len(res)
+            length = len(res)
+            res += [item + [S[i]] for item in res[length - l:]]
+        return res
+
+
 
 
 
@@ -586,4 +613,4 @@ if __name__ == '__main__':
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
     # obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     # param_1 = obj.sumRange(2, 5)
-    print(s.setZeroes([[0,0,0,5],[4,3,1,4],[0,1,1,4],[1,2,1,3],[0,0,1,1]]))
+    print(s.subsetsWithDupV2([[0,0,0,5],[4,3,1,4],[0,1,1,4],[1,2,1,3],[0,0,1,1]]))

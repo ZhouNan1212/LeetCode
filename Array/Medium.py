@@ -415,6 +415,33 @@ class Solution(object):
             for j in xrange(m / 2):
                 matrix[i][j], matrix[i][m - j - 1] = matrix[i][m - j - 1], matrix[i][j]
 
+    def removeDuplicatesV1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        index = 0
+        while index < len(nums) - 2:
+            if nums[index] == nums[index + 1] and nums[index + 1] == nums[index + 2] or len(nums) < 3:
+                del nums[index + 2]
+            else:
+                index += 1
+        return len(nums)
+
+    def removeDuplicatesV2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if len(nums) <= 2:
+            return len(nums)
+        length = 2
+        for i in range(2, len(nums)):
+            if nums[i] != nums[length - 2]:
+                nums[length] = nums[i]
+                length += 1
+        return length
+
 
 class NumArrayV1(object):
     def __init__(self, nums):
@@ -448,6 +475,7 @@ class NumArrayV1(object):
         else:
             return sums[j] - sums[i - 1]
 
+
 class NumArrayV2(object):
     def __init__(self, nums):
         """
@@ -472,7 +500,4 @@ if __name__ == '__main__':
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
     # obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     # param_1 = obj.sumRange(2, 5)
-    print(s.rotateV1([[1,2,3],
-  [4,5,6],
-  [7,8,9]
-]))
+    print(s.removeDuplicates([1,2,2,2]))

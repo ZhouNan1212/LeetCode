@@ -33,7 +33,6 @@ class Solution(object):
 
     def combinationSum3(self, k, n):
         ans = []
-
         def search(start, cnt, sums, nums):
             if cnt > k or sums > n:
                 return
@@ -512,7 +511,6 @@ class Solution(object):
                 if matrix[i][j] == 0:
                     if i not in row_zero: row_zero.append(i)
                     if j not in col_zero: col_zero.append(j)
-
         for i in row_zero:
             matrix[i] = [0]*len(matrix[0])
         for i in range(len(matrix)):
@@ -521,7 +519,7 @@ class Solution(object):
                     matrix[i][j] = 0
         return None
 
-    def subsetsWithDupV1(self, nums):
+    def subsetsWithDupV1(self, nums):  # 该方法在nums长度很长时会出现内存错误，不建议使用。
         """
         :type nums: List[int]
         :rtype: List[List[int]]
@@ -545,6 +543,20 @@ class Solution(object):
                 l = len(res)
             length = len(res)
             res += [item + [S[i]] for item in res[length - l:]]
+        return res
+
+    def combinationSum2(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
+        nums = filter(lambda x: x <= target, candidates)
+        nums.sort()
+        print nums
+        res = [[]]
+        for num in nums:
+            res += [item + [num] for item in res]
         return res
 
 
@@ -605,4 +617,4 @@ if __name__ == '__main__':
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
     # obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     # param_1 = obj.sumRange(2, 5)
-    print(s.subsetsWithDupV2([[0,0,0,5],[4,3,1,4],[0,1,1,4],[1,2,1,3],[0,0,1,1]]))
+    print(s.combinationSum2([14,6,25,9,30,20,33,34,28,30,16,12,31,9,9,12,34,16,25,32,8,7,30,12,33,20,21,29,24,17,27,34,11,17,30,6,32,21,27,17,16,8,24,12,12,28,11,33,10,32,22,13,34,18,12],27))

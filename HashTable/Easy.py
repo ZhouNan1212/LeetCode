@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Solution(object):
     def findWords(self, words):
         """
@@ -17,15 +18,16 @@ class Solution(object):
                 one_row_word.append(word)
         return one_row_word
 
-
-
-
-
-
+    def distributeCandies(self, candies):
+        """
+        :type candies: List[int]
+        :rtype: int
+        """
+        return min(len(set(candies)), len(candies) / 2)
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findWords(["Hello", "Alaska", "Dad", "Peace"]))
+    print(s.distributeCandies([0,0,14,0,10,0,0,0]))

@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import collections
+
+
 class Solution(object):
     def findWords(self, words):
         """
@@ -54,6 +57,34 @@ class Solution(object):
             else:
                 res[store[formatted]].append(string)
         return res
+
+    def isAnagramV1(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        return sorted(s) == sorted(t)
+
+    def isAnagramV2(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        """
+        默认字典,是字典的一个子类,继承有字典的方法和属性,
+        默认字典在进行定义初始化的时候可以指定字典值得默认类型,
+        例如字典中没有key = 2，执行dic[2]依然可以返回结果0.
+        """
+        histogram = collections.defaultdict(int)
+        for char in s:
+            histogram[char] += 1
+        for char in t:
+            histogram[char] -= 1
+
+        differences = sum([abs(histogram[x]) for x in histogram])
+        return differences == 0
 
 
 if __name__ == '__main__':

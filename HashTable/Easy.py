@@ -86,9 +86,43 @@ class Solution(object):
         differences = sum([abs(histogram[x]) for x in histogram])
         return differences == 0
 
+    def findTheDifferenceV1(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: str
+        """
+        histogram = collections.defaultdict(int)
+        for char in s:
+            histogram[char] += 1
+        for char in t:
+            histogram[char] -= 1
+        for key in histogram.keys():
+            if histogram[key] != 0:
+                return key
+
+    def findTheDifferenceV2(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: str
+        """
+        if len(s) == 0:
+            return t
+
+        """
+        ord()函数主要用来返回对应字符的ascii码，
+        chr()主要用来表示ascii码对应的字符他的输入时数字，可以用十进制，也可以用十六进制。
+        """
+        result = ord(s[0]) ^ ord(t[0])
+        for i in xrange(1, len(s)):
+            result ^= ord(s[i]) ^ ord(t[i])
+
+        return chr(result ^ ord(t[-1]))
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.groupAnagramsV2(["eat", "tea", "tan", "ate", "nat", "bat"]))
+    print(s.findTheDifferenceV1("abcd", "abcde"))

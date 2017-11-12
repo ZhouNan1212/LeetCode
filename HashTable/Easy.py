@@ -148,9 +148,39 @@ class Solution(object):
                 nums1Set.discard(num2)  # 如果存在元素，就删除；没有不报异常
         return res
 
+    def frequencySortV1(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        histogram = collections.defaultdict(int)
+        for char in s:
+            histogram[char] += 1
+        dic = sorted(histogram.items(), key=lambda d: d[1], reverse=True)
+        re = ""
+        for key, value in dic:
+            re += key * value
+        return re
+
+    def frequencySortV2(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        freq_map = {c: s.count(c) for c in set(s)}  # 字符串的count方法更方便
+
+        # convert to list to sorted by count
+        by_freq = sorted([(v, k) for k, v in freq_map.items()], reverse=True)
+
+        # turn list of tuples into output string
+        output = [t[1] * t[0] for t in by_freq]
+
+        return ''.join(output)
+
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findTheDifferenceV1("abcd", "abcde"))
+    print(s.frequencySort("aabbbbc"))

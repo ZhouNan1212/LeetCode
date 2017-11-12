@@ -120,6 +120,34 @@ class Solution(object):
 
         return chr(result ^ ord(t[-1]))
 
+    def intersectionV1(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        letters, re = set(nums1), set()
+        for string in nums2:
+            if string in letters:
+                re.add(string)
+        return list(re)
+
+    def intersectionV2(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        if len(nums1) > len(nums2):
+            return self.intersectionV2(nums2, nums1)  # 始终遍历较长的一个数组
+        nums1Set = set(nums1)
+        res = []
+        for num2 in nums2:
+            if num2 in nums1Set:
+                res.append(num2)
+                nums1Set.discard(num2)  # 如果存在元素，就删除；没有不报异常
+        return res
+
 
 if __name__ == '__main__':
     s = Solution()

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-import collections
+from collections import defaultdict
+import heapq
 
 
 class Solution(object):
@@ -77,7 +78,7 @@ class Solution(object):
         默认字典在进行定义初始化的时候可以指定字典值得默认类型,
         例如字典中没有key = 2，执行dic[2]依然可以返回结果0.
         """
-        histogram = collections.defaultdict(int)
+        histogram = defaultdict(int)
         for char in s:
             histogram[char] += 1
         for char in t:
@@ -92,7 +93,7 @@ class Solution(object):
         :type t: str
         :rtype: str
         """
-        histogram = collections.defaultdict(int)
+        histogram = defaultdict(int)
         for char in s:
             histogram[char] += 1
         for char in t:
@@ -153,7 +154,7 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        histogram = collections.defaultdict(int)
+        histogram = defaultdict(int)
         for char in s:
             histogram[char] += 1
         dic = sorted(histogram.items(), key=lambda d: d[1], reverse=True)
@@ -177,10 +178,49 @@ class Solution(object):
 
         return ''.join(output)
 
+    def topKFrequentV1(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        histogram = defaultdict(int)
+        re = []
+        for char in nums:
+            histogram[char] += 1
+        dic = sorted(histogram.items(), key=lambda d: d[1], reverse=True)
+        for i in range(k):
+            re.append(dic[i][0])
+        return re
+
+    def topKFrequent2(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        """
+        元素计数
+        """
+        num_count = defaultdict(int)
+        for x in nums:
+            num_count[x] += 1
+
+        heap = []
+        for num, count in num_count.iteritems():
+            pair = (-count, num)
+            heapq.heappush(heap, pair)
+
+        result = []
+        for _ in xrange(k):
+            num = heapq.heappop(heap)[1]
+            result.append(num)
+        return result
+
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.frequencySort("aabbbbc"))
+    print(s.topKFrequent([1,2],3))

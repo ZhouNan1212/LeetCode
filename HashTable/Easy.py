@@ -193,7 +193,7 @@ class Solution(object):
             re.append(dic[i][0])
         return re
 
-    def topKFrequent2(self, nums, k):
+    def topKFrequentV2(self, nums, k):
         """
         :type nums: List[int]
         :type k: int
@@ -217,10 +217,40 @@ class Solution(object):
             result.append(num)
         return result
 
+    def topKFrequentWordV1(self, words, k):
+        """
+        :type words: List[str]
+        :type k: int
+        :rtype: List[str]
+        """
+        histogram = defaultdict(int)
+        re = []
+        for word in words:
+            histogram[word] += 1
+        """
+        如果想对更多的key进行排序（不只是两个），例如对l = [(1, 2, 3, 4), (1, 2, 3, 5), (1, 2, 2, 5)]
+        这样的数组，先比最后一个，再比倒数第二个，最后比第一个只需在lambda表达式处返回相应元组即可：
+        sorted(l, key=lambda x: (x[3], x[2], x[1], x[0])),要对某个key逆序，则再前面加“-”,
+        但只限于数字类型，字符串类型不支持
+        """
+        dic = sorted(histogram.items(), key=lambda d: (-d[1], d[0]))  # 这步可直接排好序的取前k个，然后用列表推导式输出
+        for i in range(k):
+            re.append(dic[i][0])
+        return re
+
+    def topKFrequentWordV2(self, words, k):
+        counts = {}
+        for w in words:
+            if w in counts:
+                counts[w] += 1
+            else:
+                counts[w] = 1
+        ans = sorted(counts.items(), key=lambda i: (-i[1], i[0]))[:k]
+        return [x[0] for x in ans]
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.topKFrequent([1,2],3))
+    print(s.topKFrequentWordV2(["aaa", "aa", "a", "b"], 1))

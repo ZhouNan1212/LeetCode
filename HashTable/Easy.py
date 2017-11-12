@@ -25,9 +25,39 @@ class Solution(object):
         """
         return min(len(set(candies)), len(candies) / 2)
 
+    def groupAnagramsV1(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+        re, output = {}, []
+        for string in strs:
+            key = "".join(sorted(string))
+            re[key] = re.get(key, [])  # 应该先get再append，否则如果不存在该键就会出错
+            re[key].append(string)
+        for value in re.values():
+            output.append(value)
+        return output
+
+    def groupAnagramsV2(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
+        store = {}
+        res = []
+        for string in strs:
+            formatted = ''.join(sorted(string))
+            if formatted not in store:
+                store[formatted] = len(res)
+                res.append([string])
+            else:
+                res[store[formatted]].append(string)
+        return res
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.distributeCandies([0,0,14,0,10,0,0,0]))
+    print(s.groupAnagramsV2(["eat", "tea", "tan", "ate", "nat", "bat"]))

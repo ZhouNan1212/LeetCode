@@ -326,10 +326,48 @@ class Solution(object):
         values = replace_map.values()
         return len(set(values)) == len(values)
 
+    def countPrimesV1(self, n):  # Memory Limit Exceeded
+        """
+        :type n: int
+        :rtype: int
+        """
+        dic = {}
+        if n <= 2:
+            return 0
+        for i in range(2, n):
+            dic[i] = True
+        for key in dic.keys():
+            if dic[key] is True:
+                times = 2
+                while key * times < n:
+                    if dic[key * times] is True:
+                        dic[key * times] = False
+                    times += 1
+        return len(filter(lambda x: dic[x] is True, dic))
+
+    def countPrimesV2(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n <= 2:
+            return 0
+        number_type, count = [True] * n, 0
+        for i in range(2, n):
+            if number_type[i] is True:
+                count += 1
+                times = 2
+                while i * times < n:
+                    if number_type[i * times] is True:
+                        number_type[i * times] = False
+                    times += 1
+        return count
+
+
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.isIsomorphicV2("egg", "app"))
+    print(s.countPrimesV2(100))

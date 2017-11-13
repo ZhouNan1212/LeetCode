@@ -248,9 +248,49 @@ class Solution(object):
         ans = sorted(counts.items(), key=lambda i: (-i[1], i[0]))[:k]
         return [x[0] for x in ans]
 
+    def findLHSV1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        histogram = defaultdict(int)
+        for num in nums:
+            histogram[num] += 1
+        dic, re = sorted(histogram.items(), key=lambda d: d[0]), 0
+        for index in range(len(dic) - 1):
+            if abs(dic[index][0] - dic[index + 1][0]) == 1:
+                re = max(re, dic[index][1] + dic[index + 1][1])
+        return re
+
+    def findLHSV2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if len(nums) == 0:
+            return 0
+        dic = {}
+        target = 0
+        for i in nums:
+            if i not in dic:
+                dic[i] = 1
+            else:
+                dic[i] += 1
+        """
+        没有排序一步，并且是直接从字典中取值，没有元组
+        """
+        for k in dic.keys():
+            if k - 1 in dic:
+                target = max(target, dic[k] + dic[k - 1])
+
+        return target
+
+
+
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.topKFrequentWordV2(["aaa", "aa", "a", "b"], 1))
+    print(s.findLHSV1([1,3,2,2,5,2,3,7]))

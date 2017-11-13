@@ -285,7 +285,46 @@ class Solution(object):
 
         return target
 
+    def isIsomorphicV1(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        sourceMap, targetMap = dict(), dict()
+        for x in range(len(s)):
+            source, target = sourceMap.get(t[x]), targetMap.get(s[x])
+            if source is None and target is None:
+                sourceMap[t[x]], targetMap[s[x]] = s[x], t[x]
+            elif target != t[x] or source != s[x]:
+                return False
+        return True
 
+    def isIsomorphicV2(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        print set(zip(s, t)), zip(s, t)
+        return len(set(zip(s, t))) == len(set(s)) == len(set(t))
+
+    def isIsomorphicV3(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        replace_map = {}
+        for i in range(len(s)):
+            if s[i] not in replace_map:
+                replace_map[s[i]] = t[i]
+            else:
+                if replace_map[s[i]] != t[i]:
+                    return False
+
+        values = replace_map.values()
+        return len(set(values)) == len(values)
 
 
 
@@ -293,4 +332,4 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findLHSV1([1,3,2,2,5,2,3,7]))
+    print(s.isIsomorphicV2("egg", "app"))

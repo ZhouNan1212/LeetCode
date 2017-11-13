@@ -251,6 +251,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    #print(s.getRowV2(3))
-    #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
+    # print(s.getRowV2(3))
+    # print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
     print(s.topKFrequentWordV2(["aaa", "aa", "a", "b"], 1))

@@ -277,7 +277,7 @@ class Solution(object):
             else:
                 dic[i] += 1
         """
-        没有排序一步，并且是直接从字典中取值，没有元组
+        没有排序一步，并且是直接从字典中取值，没有元组，有可能因为字典的键值插入就是有序的
         """
         for k in dic.keys():
             if k - 1 in dic:
@@ -286,11 +286,8 @@ class Solution(object):
         return target
 
 
-
-
-
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findLHSV1([1,3,2,2,5,2,3,7]))
+    print(s.findLHSV2(["a", "banana", "app", "appl", "ap", "apply", "apple"]))

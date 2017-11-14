@@ -290,4 +290,3 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findLHSV2(["a", "banana", "app", "appl", "ap", "apply", "apple"]))

@@ -285,8 +285,86 @@ class Solution(object):
 
         return target
 
+    def isIsomorphicV1(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        sourceMap, targetMap = dict(), dict()
+        for x in range(len(s)):
+            source, target = sourceMap.get(t[x]), targetMap.get(s[x])
+            if source is None and target is None:
+                sourceMap[t[x]], targetMap[s[x]] = s[x], t[x]
+            elif target != t[x] or source != s[x]:
+                return False
+        return True
+
+    def isIsomorphicV2(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        print set(zip(s, t)), zip(s, t)
+        return len(set(zip(s, t))) == len(set(s)) == len(set(t))
+
+    def isIsomorphicV3(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        replace_map = {}
+        for i in range(len(s)):
+            if s[i] not in replace_map:
+                replace_map[s[i]] = t[i]
+            else:
+                if replace_map[s[i]] != t[i]:
+                    return False
+
+        values = replace_map.values()
+        return len(set(values)) == len(values)
+
+    def countPrimesV1(self, n):  # Memory Limit Exceeded
+        """
+        :type n: int
+        :rtype: int
+        """
+        dic = {}
+        if n <= 2:
+            return 0
+        for i in range(2, n):
+            dic[i] = True
+        for key in dic.keys():
+            if dic[key] is True:
+                times = 2
+                while key * times < n:
+                    if dic[key * times] is True:
+                        dic[key * times] = False
+                    times += 1
+        return len(filter(lambda x: dic[x] is True, dic))
+
+    def countPrimesV2(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n <= 2:
+            return 0
+        number_type, count = [True] * n, 0
+        for i in range(2, n):
+            if number_type[i] is True:
+                count += 1
+                times = 2
+                while i * times < n:
+                    if number_type[i * times] is True:
+                        number_type[i * times] = False
+                    times += 1
+        return count
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
+    print(s.countPrimesV2(100))

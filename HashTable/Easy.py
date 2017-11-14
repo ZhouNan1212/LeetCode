@@ -363,8 +363,19 @@ class Solution(object):
                     times += 1
         return count
 
+    def wordPattern(self, pattern, string_pattern):
+        """
+        :type pattern: str
+        :type string_pattern: str
+        :rtype: bool
+        """
+        replace_map, pattern_letter = list(pattern), string_pattern.split(' ')
+        return len(set(zip(replace_map, pattern_letter))) == len(set(replace_map)) == len(set(pattern_letter)) and len(replace_map) == len(pattern_letter)
+
+
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.countPrimesV2(100))
+    print(s.wordPattern("aba", "cat cat cat dog"))

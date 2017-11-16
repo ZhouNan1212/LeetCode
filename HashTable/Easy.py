@@ -372,10 +372,53 @@ class Solution(object):
         replace_map, pattern_letter = list(pattern), string_pattern.split(' ')
         return len(set(zip(replace_map, pattern_letter))) == len(set(replace_map)) == len(set(pattern_letter)) and len(replace_map) == len(pattern_letter)
 
+    def findAnagramsV1(self, s, p):  # Time Limit Exceeded
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        p_histogram = defaultdict(int)
+        for i in p:
+            p_histogram[i] += 1
+        length, re = len(p), []
+        for i in range(len(s) - length + 1):
+            s_histogram = defaultdict(int)
+            for j in s[i:i + length]:
+                s_histogram[j] += 1
+            if s_histogram == p_histogram:
+                re.append(i)
+        return re
+
+    def findAnagramsV2(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+        if len(s) == 0 or len(p) == 0 or len(s) < len(p):
+            return []
+        p_histogram, s_histogram, length, re = defaultdict(int), defaultdict(int), len(p), []
+        for i in range(length):
+            p_histogram[p[i]] += 1
+            s_histogram[s[i]] += 1
+        left, right = 0, 0 + length
+        if p_histogram == s_histogram:
+            re.append(0)
+        while right < len(s):
+            s_histogram[s[left]] -= 1
+            s_histogram[s[right]] += 1
+            if s_histogram[s[left]] == 0:
+                del s_histogram[s[left]]
+            left += 1
+            right += 1
+            if p_histogram == s_histogram:
+                re.append(left)
+        return re
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.wordPattern("aba", "cat cat cat dog"))
+    print(s.findAnagramsV2("cbaebabacd", "abc"))

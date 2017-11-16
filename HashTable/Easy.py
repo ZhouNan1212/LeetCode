@@ -416,9 +416,59 @@ class Solution(object):
                 re.append(left)
         return re
 
+    def checkInclusionV1(self, s1, s2):
+        """
+        :type s1: str
+        :type s2: str
+        :rtype: bool
+        """
+        if len(s1) == 0 or len(s2) == 0 or len(s1) > len(s2):
+            return False
+        s1_histogram, s2_histogram, length = defaultdict(int), defaultdict(int), len(s1)
+        for i in range(length):
+            s1_histogram[s1[i]] += 1
+            s2_histogram[s2[i]] += 1
+        left, right = 0, 0 + length
+        if s1_histogram == s2_histogram:
+            return True
+        while right < len(s2):
+            s2_histogram[s2[left]] -= 1
+            s2_histogram[s2[right]] += 1
+            if s2_histogram[s2[left]] == 0:
+                del s2_histogram[s2[left]]
+            left += 1
+            right += 1
+            if s1_histogram == s2_histogram:
+                return True
+        return False
+
+    def checkInclusionV2(self, s1, s2):
+        """
+        :type s1: str
+        :type s2: str
+        :rtype: bool
+        """
+        r = [0] * 26
+        for i in s1:
+            print ord(i), ord('a')
+            r[ord(i) - ord('a')] += 1
+
+        r1 = [0] * 26
+        for i in s2[:len(s1)]:
+            r1[ord(i) - ord('a')] += 1
+        if r1 == r:
+            return True
+
+        for i in range(1, len(s2) - len(s1) + 1):
+            r1[ord(s2[i - 1]) - ord('a')] -= 1
+            r1[ord(s2[i + len(s1) - 1]) - ord('a')] += 1
+            if r == r1:
+                return True
+        return False
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findAnagramsV2("cbaebabacd", "abc"))
+    print(s.checkInclusionV2("ab", "eidboaoo"))

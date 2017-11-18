@@ -570,14 +570,55 @@ class Solution(object):
         if odd == 0:
             return sum
         else:
-            return sum - (odd-1)
+            return sum - (odd-1)  # 有odd个奇数，只要最后给odd-1个奇数减1即可
 
+    def intersectV1(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        nums1_histogram, nums2_histogram, nums1_length, nums2_length, re = \
+            defaultdict(int), defaultdict(int), len(nums1), len(nums2), []
+        for index in range(max(nums1_length, nums2_length)):
+            if index < nums1_length:
+                nums1_histogram[nums1[index]] += 1
+            if index < nums2_length:
+                nums2_histogram[nums2[index]] += 1
+        if len(nums1_histogram) > len(nums2_histogram):
+            traversal_dict = nums2_histogram
+            search_dict = nums1_histogram
+        else:
+            traversal_dict = nums1_histogram
+            search_dict = nums2_histogram
+        print traversal_dict, '\n', search_dict
+        for key in traversal_dict.keys():
+            if key in search_dict:
+                re += [key] * min(search_dict[key], traversal_dict[key])
+        return re
 
+    def intersectV2(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        # a,b = map(collections.Counter, (nums1,nums2))
+        # return list((a & b).elements())
 
+        result = []
+        count = {}
+        for num in nums2:
+            count[num] = count.get(num, 0) + 1
 
+        for num in nums1:
+            if num in count and count[num] > 0:
+                result.append(num)
+                count[num] -= 1
+        return result
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.longestPalindromeV1("ccd"))
+    print(s.intersectV1([1], []))

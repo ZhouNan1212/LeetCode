@@ -514,26 +514,70 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        temp=0
-        count=0
-        m=[]
-        while n!=1:
+        temp = 0
+        count = 0
+        m = []
+        while n != 1:
             if n in m:
                 return False
             m.append(n)
-            temp=n%10
-            while n>=10:
-                count+=temp*temp
-                n=n//10
-                temp=n%10
-            count+=n*n
-            n=count
-            count=0
-            temp=0
+            temp = n % 10
+            while n >= 10:
+                count += temp * temp
+                n = n // 10
+                temp = n % 10
+            count += n * n
+            n = count
+            count = 0
+            temp = 0
         return True
+
+    def longestPalindromeV1(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        if len(s) == 0:
+            return 0
+        s_histogram, length, count = defaultdict(int), 0, 0
+        for string in s:
+            s_histogram[string] += 1
+        for num in sorted(s_histogram.values(), reverse=True):
+            if num % 2 == 0:
+                length += num
+            elif count == 0:
+                length += num
+                count += 1
+            else:
+                length += num - 1
+        return length
+
+    def longestPalindromeV2(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        p = set(s)
+        sum = 0
+        odd = 0
+        for i in p:
+            k = s.count(i)
+            if k % 2 == 0:
+               sum = sum + k
+            else:
+               odd = odd + 1
+               sum = sum + k
+        if odd == 0:
+            return sum
+        else:
+            return sum - (odd-1)
+
+
+
+
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.isHappyV1(1))
+    print(s.longestPalindromeV1("ccd"))

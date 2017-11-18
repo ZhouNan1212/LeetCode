@@ -466,9 +466,74 @@ class Solution(object):
                 return True
         return False
 
+    def minWindow(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: str
+        """
+        if len(s) == 0 or len(t) == 0 or len(s) < len(t):
+            return ""
+        s_histogram, t_histogram, t_length = defaultdict(int), defaultdict(int), len(t)
+        for i in range(len(s)):
+            s_histogram[s[i]] += 1
+            if i < len(t):
+                t_histogram[t[i]] += 1
+        left, right = 0, len(s) - 1
+        while left + t_length < right:
+            for key in t_histogram.keys():
+                if t_histogram[key] <= s_histogram[key]:
+                    s_histogram[s[left]] -= 1
+                    left += 1
+                else:
+                    break
+        while left + t_length < right:
+            for key in t_histogram.keys():
+                if t_histogram[key] <= s_histogram[key]:
+                    s_histogram[s[right]] -= 1
+                    right += 1
+                else:
+                    break
+        return s[left:right + 1]
+
+    def isHappyV1(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        while n != 1 and n != 4:
+            t = 0
+            while n:
+                t += (n % 10) * (n % 10)
+                n /= 10
+            n = t
+        return n == 1
+
+    def isHappyV2(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        temp=0
+        count=0
+        m=[]
+        while n!=1:
+            if n in m:
+                return False
+            m.append(n)
+            temp=n%10
+            while n>=10:
+                count+=temp*temp
+                n=n//10
+                temp=n%10
+            count+=n*n
+            n=count
+            count=0
+            temp=0
+        return True
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.checkInclusionV2("ab", "eidboaoo"))
+    print(s.isHappyV1(1))

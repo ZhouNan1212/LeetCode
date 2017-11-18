@@ -617,8 +617,46 @@ class Solution(object):
                 count[num] -= 1
         return result
 
+    def findRestaurant_559_V1(self, list1, list2):
+        """
+        :type list1: List[str]
+        :type list2: List[str]
+        :rtype: List[str]
+        """
+        re = defaultdict(list)
+        for index, value in enumerate(list2):
+            try:
+                re[list1.index(value) + index].append(value)
+            except ValueError:
+                pass
+        re_dict = sorted(re.items(), key=lambda d: d[0])
+        return re_dict[0][1]
+
+    def findRestaurant_559_V2(self, list1, list2):
+        """
+        :type list1: List[str]
+        :type list2: List[str]
+        :rtype: List[str]
+        """
+        exist = {x: i for i, x in enumerate(list1)}
+        tmp = 2 ** 32 - 1
+        ans = []
+
+        for i, x in enumerate(list2):
+            if x in exist:
+                if i + exist[x] < tmp:
+                    tmp = i + exist[x]
+                    ans = [x]
+                elif i + exist[x] == tmp:
+                    ans.append(x)
+
+        return ans
+
+
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.intersectV1([1], []))
+    print(s.findRestaurant_559_V1(["dixyp","uq","q","KFC"],
+["yl","fjugc","rlni","dixyp","uq","q","KFC"]))

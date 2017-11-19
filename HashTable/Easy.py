@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from collections import defaultdict
 import heapq
+import sys
 
 
 class Solution(object):
@@ -652,11 +653,48 @@ class Solution(object):
 
         return ans
 
+    def findRestaurant_559_V3(self, list1, list2):
+        """
+        :type list1: List[str]
+        :type list2: List[str]
+        :rtype: List[str]
+        """
+        hashMap = {}
+        for i, item in enumerate(list1):
+            hashMap[item] = i
+
+        results = []
+        lowestSum = sys.maxint
+        for i, item in enumerate(list2):
+            if item in hashMap:
+                newSum = hashMap[item] + i
+                if newSum < lowestSum:
+                    results = [item]
+                    lowestSum = newSum
+                elif newSum == lowestSum:
+                    results.append(item)
+
+        return results
+
+    def numberOfBoomerangs_447(self, points):
+        """
+        :type points: List[List[int]]
+        :rtype: int
+        """
+        ans = 0
+        for x1, y1 in points:
+            dmap = defaultdict(int)
+            for x2, y2 in points:
+                dmap[(x1 - x2) ** 2 + (y1 - y2) ** 2] += 1
+            for d in dmap:
+                ans += dmap[d] * (dmap[d] - 1)
+        return ans
+
+
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findRestaurant_559_V1(["dixyp","uq","q","KFC"],
-["yl","fjugc","rlni","dixyp","uq","q","KFC"]))
+    print(s.numberOfBoomerangs_447([[0,0],[1,0],[2,0]]))

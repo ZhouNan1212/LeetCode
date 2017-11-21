@@ -101,9 +101,66 @@ class Solution(object):
             index -= 1
         return "".join(map(str, each_digit))
 
+
+class Judge(object):  # Time Limit Exceeded
+    """
+    正整数M能表示成两个整数平方和的充要条件是：M的素因子分解式重所有形如4n-1的素因子的幂指数都是偶数
+    """
+
+    # 判断是否是素数
+    @staticmethod
+    def isprime(num):
+        count = num / 2
+        while count > 1:
+            if num % count == 0:
+                return False
+            count -= 1
+        else:
+            return True
+
+    # 得到所有的约数
+    @staticmethod
+    def getfactors(num):
+        return [x for x in range(1, num) if num % x == 0]
+
+    # 分解
+    @staticmethod
+    def primefactor(num):
+        s = Judge()
+        if s.isprime(num):
+            return [1, num]
+        factors = s.getfactors(num)
+        retList = []
+        consult = num
+        for i in range(1, len(factors)):
+            if consult == 1:
+                break
+            while True:
+                if consult % factors[i] != 0:
+                    break
+                if s.isprime(factors[i]):
+                    consult /= factors[i]
+                    retList.append(factors[i])
+                else:
+                    break
+        return retList
+
+    def judgeSquareSum(self, c):
+        """
+        :type c: int
+        :rtype: bool
+        """
+        s = Judge()
+        factors_list = s.primefactor(c)
+        all_factors = set(factors_list)
+        for i in all_factors:
+            if (i + 1) % 4 == 0 and factors_list.count(i) % 2 != 0:
+                return False
+        return True
+
 if __name__ == '__main__':
-    s = Solution()
+    s = Judge()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.addStrings_415("127", "123"))
+    print(s.judgeSquareSum(3))
 

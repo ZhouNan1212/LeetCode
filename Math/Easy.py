@@ -40,6 +40,7 @@ class Solution(object):
         re = sum(map(lambda n: n[0] * n[1], zip(each_letter, each_postion)))
         return re
 
+
     def convertToTitle_168_V1(self, n):
         """
         :type n: int

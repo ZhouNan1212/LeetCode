@@ -265,9 +265,6 @@ class Solution(object):
                 total_time += min(timeSeries[index + 1] - timeSeries[index], duration)
             return total_time + duration
 
-
-
-
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))

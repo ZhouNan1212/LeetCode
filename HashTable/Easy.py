@@ -690,11 +690,30 @@ class Solution(object):
                 ans += dmap[d] * (dmap[d] - 1)
         return ans
 
-
-
+    def longestWord_720_V1(self, words):  # Time Limit Exceeded
+        """
+        :type words: List[str]
+        :rtype: str
+        """
+        re_list = [""]
+        for word in words:
+            length = len(word)
+            if length > 1:
+                while word[0:length] in words:
+                    length -= 1
+            elif re_list == [""]:
+                re_list = [word]
+            if length == 0:
+                if len(word) > max(map(len, re_list)):
+                    re_list = [word]
+                elif len(word) == len(re_list[0]):
+                    re_list.append(word)
+        return sorted(re_list)[0]
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.numberOfBoomerangs_447([[0,0],[1,0],[2,0]]))
+    print(s.longestWord_720_V1(
+        ["yo", "ew", "fc", "zrc", "yodn", "fcm", "qm", "qmo", "fcmz", "z", "ewq", "yod", "ewqz", "y"]
+    ))

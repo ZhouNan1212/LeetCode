@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Solution(object):
     def addDigits_258_V1(self, num):
         """
@@ -80,9 +81,29 @@ class Solution(object):
             n = (n - 1) / 26
         return ret
 
+    def addStrings_415(self, num1, num2):
+        """
+        :type num1: str
+        :type num2: str
+        :rtype: str
+        """
+        length = max(len(num1), len(num2))
+        num1_str, num2_str, re = num1.zfill(length), num2.zfill(length), ""  # 将两个字符串长度补齐
+        num1_str_list, num2_str_list = list(num1_str), list(num2_str)
+        each_digit = map(lambda x: int(x[0]) + int(x[1]), zip(num1_str_list, num2_str_list))
+
+        index = len(each_digit) - 1
+        while index > 0:
+            if each_digit[index] > 9:
+                each_digit[index - 1] += each_digit[index] / 10
+                each_digit[index] = each_digit[index] % 10
+                print each_digit[index - 1]
+            index -= 1
+        return "".join(map(str, each_digit))
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.titleToNumber_171("Z"))
+    print(s.addStrings_415("127", "123"))
 

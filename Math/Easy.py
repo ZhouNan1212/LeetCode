@@ -35,10 +35,9 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
-        re = []
-        for i in s:
-            print i
-            re += ord(i) - 64
+        each_letter = map(lambda i: ord(i) - 64, s)
+        each_postion = map(lambda x: 26 ** x, list(reversed(range(len(s)))))
+        re = sum(map(lambda n: n[0] * n[1], zip(each_letter, each_postion)))
         return re
 
     def convertToTitle_168_V1(self, n):
@@ -84,6 +83,5 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    for i in range(10, 70):
-        print(s.convertToTitle_168_V3(i))
+    print(s.titleToNumber_171("Z"))
 

@@ -30,18 +30,60 @@ class Solution(object):
                     re_list.append(i)
         return re_list
 
+    def titleToNumber_171(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        re = []
+        for i in s:
+            print i
+            re += ord(i) - 64
+        return re
+
+    def convertToTitle_168_V1(self, n):
+        """
+        :type n: int
+        :rtype: str
+        """
+        re = []
+        while n > 0:
+            remainder = n % 26
+            if remainder == 0:
+                re.insert(0, 26)
+                div = n / 26 - 1
+            else:
+                re.insert(0, remainder)
+                div = n / 26
+            n = div
+        title = ""
+        for i in re:
+            title += chr(i + 64)
+        return title
+
+    def convertToTitle_168_V2(self, num):
+        """
+        :type num: int
+        :rtype: str
+        """
+        return "" if num == 0 else self.convertToTitle_168_V2((num - 1) / 26) + chr((num - 1) % 26 + ord('A'))
+
+    def convertToTitle_168_V3(self, n):
+        """
+        :type n: int
+        :rtype: str
+        """
+        ret = ""
+        letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        while n:
+            ret = letters[n % 26-1] + ret
+            n = (n - 1) / 26
+        return ret
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.selfDividingNumbers_728(1,22))
-
-
-
-
-
-
-
-
-
+    for i in range(10, 70):
+        print(s.convertToTitle_168_V3(i))
 

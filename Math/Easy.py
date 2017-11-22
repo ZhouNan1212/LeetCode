@@ -123,6 +123,57 @@ class Solution(object):
     def isPerfectSquare_367_V2(self, num):
         return int(num**0.5) == num**0.5
 
+    def isPerfectSquare_367_V3(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        sq = num/2.0
+        while abs(sq*sq - num) > 0.000001:
+            sq = (sq + num/sq)/2
+        return round(sq)*round(sq) == num
+
+    def superPow_372_V1(self, a, b):  # Time Limit Exceeded
+        """
+        :type a: int
+        :type b: List[int]
+        :rtype: int
+        """
+        num = int("".join(map(str, b)))
+        return a ** num % 1337
+
+    def superPow_372_V2(self, a, b):
+        res = 1
+        s = Solution()
+        for i in b:
+            res = s.support_pow(res, 10) * s.support_pow(a, int(i)) % 1337
+        return res
+
+    @staticmethod
+    def support_pow(x, n):
+        if n == 0:
+            return 1
+        if n == 1:
+            return x % 1337
+        return pow(x % 1337, n / 2) * pow(x % 1337, n - n / 2) % 1337
+
+    def superPow_372_V3(self, a, b):
+        """
+        :type a: int
+        :type b: List[int]
+        :rtype: int
+        """
+        mod1 = mod = a % 1337
+        period = 0
+        while True:  # search for period
+            mod = mod * mod1 % 1337
+            period += 1
+            if mod == mod1:
+                break
+        b = int(''.join(str(i) for i in b))  # python is sweet, it has built-in bigint support
+        b_adjusted = b % period
+        return (mod ** b_adjusted) % 1337
+
 
 class Judge(object):  # Time Limit Exceeded
     """
@@ -184,5 +235,5 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.isPerfectSquare(4))
+    print(s.superPow_372_V2(2,[1,0]))
 

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import math
 class Solution(object):
     def addDigits_258_V1(self, num):
         """
@@ -101,6 +102,27 @@ class Solution(object):
             index -= 1
         return "".join(map(str, each_digit))
 
+    def mySqrt_69(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        return int(math.sqrt(x))
+
+    def isPerfectSquare_367_V1(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        i = 1
+        while num > 0:
+            num -= i
+            i += 2
+        return num == 0
+
+    def isPerfectSquare_367_V2(self, num):
+        return int(num**0.5) == num**0.5
+
 
 class Judge(object):  # Time Limit Exceeded
     """
@@ -159,8 +181,8 @@ class Judge(object):  # Time Limit Exceeded
         return True
 
 if __name__ == '__main__':
-    s = Judge()
+    s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.judgeSquareSum(3))
+    print(s.isPerfectSquare(4))
 

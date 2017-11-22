@@ -163,6 +163,10 @@ class Solution(object):
         :type b: List[int]
         :rtype: int
         """
+        """
+        1. a^b % 1337 = (a%1337)^b % 1337
+        2. xy % 1337 = ((x%1337) * (y%1337)) % 1337
+        """
         mod1 = mod = a % 1337
         period = 0
         while True:  # search for period
@@ -173,6 +177,27 @@ class Solution(object):
         b = int(''.join(str(i) for i in b))  # python is sweet, it has built-in bigint support
         b_adjusted = b % period
         return (mod ** b_adjusted) % 1337
+
+    def addBinary_67(self, a, b):
+        """
+        :type a: str
+        :type b: str
+        :rtype: str
+        """
+        length = max(len(a), len(b))
+        a, b = a.zfill(length), b.zfill(length)
+        num = map(lambda n: int(n[0]) + int(n[1]), zip(a, b))
+
+        index = len(num) - 1
+        while index > 0:
+            if num[index] > 1:
+                num[index - 1] += num[index] / 2
+                num[index] = num[index] % 2
+                print num[index - 1]
+            index -= 1
+        num[0] = str(bin(num[0]))[2:]
+        return "".join(map(str, num))
+
 
 
 class Judge(object):  # Time Limit Exceeded
@@ -235,5 +260,5 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.superPow_372_V2(2,[1,0]))
+    print(s.addBinary_67("11", "1"))
 

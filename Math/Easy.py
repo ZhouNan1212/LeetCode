@@ -205,7 +205,6 @@ class Solution(object):
         """
         """
         1     2       4         8         16 　　....
-
         1     10      100       1000      10000　....
         2的次方数都只有一个1，剩下的都是0，所以只要每次判断最低位是否为1，然后向右移位，最后统计1的个数即可判断是否是2的次方数
         """
@@ -232,6 +231,34 @@ class Solution(object):
         那么如果此时我们减1的话，则最高位会降一位，其余为0的位现在都为变为1，那么我们把两数相与，就会得到0
         """
         return (n > 0) and (not (n & (n - 1)))
+
+    def isPowerOfThree_326_V1(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        if n == 1:
+            return True
+        re, element = [], [1, 0]
+        while n > 0:
+            re.insert(0, n % 3)
+            n = n / 3
+        return re.count(1) == 1 and set(element) == set(re)
+
+    def isPowerOfThree_326_V2(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        # 3^19 = 1162261467 which is the largest power of 3 in integer range
+        if n > 0 and 1162261467 % n == 0:
+            return True
+        else:
+            return False
+
+
+
+
 
 
 
@@ -295,5 +322,5 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.addBinary_67("11", "1"))
+    print(s.isPowerOfThree(3))
 

@@ -284,6 +284,17 @@ class Solution(object):
             print num
         return True if num == 1 else False
 
+    def arrangeCoins_441(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        k = math.floor(math.sqrt(2 * n))
+        if k * (k + 1) <= 2 * n:
+            return int(k)
+        else:
+            return int(k - 1)
+
 
 class Judge(object):  # Time Limit Exceeded
     """
@@ -345,5 +356,5 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.isPowerOfFour_342_V2(16))
+    print(s.arrangeCoins_441(11))
 

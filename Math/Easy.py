@@ -198,6 +198,41 @@ class Solution(object):
         num[0] = str(bin(num[0]))[2:]
         return "".join(map(str, num))
 
+    def isPowerOfTwo_231_V1(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        """
+        1     2       4         8         16 　　....
+
+        1     10      100       1000      10000　....
+        2的次方数都只有一个1，剩下的都是0，所以只要每次判断最低位是否为1，然后向右移位，最后统计1的个数即可判断是否是2的次方数
+        """
+        cnt = 0
+        while n > 0:
+            cnt += (n & 1)
+            n >>= 1
+        return cnt == 1
+
+    def isPowerOfTwo_231_V2(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        return n > 0 and bin(n).count('1') == 1
+
+    def isPowerOfTwo_231_V3(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        """
+        如果一个数是2的次方数的话，根据上面分析，那么它的二进数必然是最高位为1，其它都为0，
+        那么如果此时我们减1的话，则最高位会降一位，其余为0的位现在都为变为1，那么我们把两数相与，就会得到0
+        """
+        return (n > 0) and (not (n & (n - 1)))
+
 
 
 class Judge(object):  # Time Limit Exceeded

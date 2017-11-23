@@ -256,6 +256,20 @@ class Solution(object):
         else:
             return False
 
+    def isPowerOfFour_342(self, n):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        if n == 1:
+            return True
+        re, element = [], [1, 0]
+        while n > 0:
+            re.insert(0, n % 4)
+            n = n / 4
+        return re.count(1) == 1 and set(element) == set(re)
+
+
 
 
 
@@ -322,5 +336,5 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.isPowerOfThree(3))
+    print(s.isPowerOfFour_342(1))
 

@@ -256,10 +256,13 @@ class Solution(object):
         else:
             return False
 
-    def isPowerOfFour_342(self, n):
+    def isPowerOfFour_342_V1(self, n):
         """
         :type num: int
         :rtype: bool
+        """
+        """
+        转4进制，如果是4的幂，就只有最高位是1，其余为0
         """
         if n == 1:
             return True
@@ -269,11 +272,17 @@ class Solution(object):
             n = n / 4
         return re.count(1) == 1 and set(element) == set(re)
 
-
-
-
-
-
+    def isPowerOfFour_342_V2(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        if num < 1:
+            return False
+        while num % 4 == 0:
+            num /= 4
+            print num
+        return True if num == 1 else False
 
 
 class Judge(object):  # Time Limit Exceeded
@@ -336,5 +345,5 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.isPowerOfFour_342(1))
+    print(s.isPowerOfFour_342_V2(16))
 

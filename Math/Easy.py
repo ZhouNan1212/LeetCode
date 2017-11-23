@@ -289,11 +289,19 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        # k < sqrt(k^2 + k) < k + 1
         k = math.floor(math.sqrt(2 * n))
         if k * (k + 1) <= 2 * n:
             return int(k)
         else:
             return int(k - 1)
+
+    def trailingZeroes_172(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        return 0 if n == 0 else n / 5 + self.trailingZeroes_172(n / 5)
 
 
 class Judge(object):  # Time Limit Exceeded
@@ -356,5 +364,5 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.arrangeCoins_441(11))
+    print(s.trailingZeroes_172(10))
 

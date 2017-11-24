@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import math
+
+
 class Solution(object):
     def addDigits_258_V1(self, num):
         """

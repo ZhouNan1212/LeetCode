@@ -102,11 +102,31 @@ class Solution(object):
                 '8'*eight +
                 '9'*nine)
 
+    def isUgly_263(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        if num < 1:
+            return False
+        while num > 1:
+            if num % 2 == 0:
+                num /= 2
+            elif num % 3 == 0:
+                num /= 3
+            elif num % 5 == 0:
+                num /= 5
+            else:
+                return False
+        return True
+
+
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.originalDigits_423("owoztneoer"))
+    print(s.isUgly_263(-2147483648))
 
 
 

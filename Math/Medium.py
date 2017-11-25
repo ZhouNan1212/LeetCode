@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import collections
 
 
 class Solution(object):
@@ -55,11 +56,57 @@ class Solution(object):
         I = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
         return M[num / 1000] + C[(num % 1000) / 100] + X[(num % 100) / 10] + I[num % 10]
 
+    def originalDigits_423_V1(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        """
+        观察英文单词，six, zero, two, eight, seven, four中分别包含唯一字母x, z, w, g, v, u；
+        因此6, 0, 2, 8, 7, 4需要排在其余数字之前。排除这6个数字之后，剩下的4个数字中，按照字母唯一的原则顺次挑选。
+        由于剩下的单词中，只有five包含f，因此选为下一个单词；
+        """
+        cnts = collections.Counter(s)
+        nums = ['six', 'zero', 'two', 'eight', 'seven', 'four', 'five', 'nine', 'one', 'three']
+        numc = [collections.Counter(num) for num in nums]
+
+        digits = [6, 0, 2, 8, 7, 4, 5, 9, 1, 3]
+        ans = [0] * 10
+        for idx, num in enumerate(nums):
+            cntn = numc[idx]
+            t = min(cnts[c] / cntn[c] for c in cntn)
+            ans[digits[idx]] = t
+            for c in cntn:
+                cnts[c] -= t * cntn[c]
+        return ''.join(str(i) * n for i, n in enumerate(ans))
+
+    def originalDigits_423_V2(self, s):
+        zero = s.count('z')
+        eight = s.count('g')
+        two = s.count('w')
+        six = s.count('x')
+        three = s.count('h') - eight
+        seven = s.count('s') - six
+        five = s.count('v') - seven
+        four = s.count('f') - five
+        one = s.count('o') - four - two - zero
+        nine = s.count('i') - five - six - eight
+        return ('0'*zero +
+                '1'*one +
+                '2'*two +
+                '3'*three +
+                '4'*four +
+                '5'*five +
+                '6'*six +
+                '7'*seven +
+                '8'*eight +
+                '9'*nine)
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.intToRoman_12_V2(130))
+    print(s.originalDigits_423("owoztneoer"))
 
 
 

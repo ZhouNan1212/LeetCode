@@ -27,8 +27,14 @@ class Solution(object):
         """
         return any((word.isupper(), word.islower(), word.istitle()))
 
+    def reverseWords_557(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        return " ".join(map(lambda n: n[::-1], s.split(' ')))  # 这里用列表推导式也可以
+        # return " ".join([n[::-1] for n in s.split(' ')])
+
 if __name__ == '__main__':
     s = Solution()
-    #print(s.getRowV2(3))
-    #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print s.detectCapitalUse_520_V2("leeTcode")
+    print s.reverseWords_557("Let's take LeetCode contest")

@@ -277,19 +277,23 @@ class Solution(object):
         """
         return s[::-1]
 
-
-
-
-
-
-
+    def reverseVowels_345(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        re = list(s)
+        a = filter(lambda i: s[i] in ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'], range(len(s)))
+        for x, y in zip(a[0:len(a)/2], a[::-1]):
+            re[x], re[y] = re[y], re[x]
+        return "".join(re)
 
 
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print s.reverseString_344('asdfgfhjjk')
+    print s.reverseVowels_345("leetcode")
     # for i in range(1, 13):
     #     print(i,"---------", s.numSquares_279_V1(i))
 

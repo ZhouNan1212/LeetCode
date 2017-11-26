@@ -263,6 +263,20 @@ class Solution(object):
             a += 1
         return 3
 
+    def reverseString_344_V1(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        return "".join(list(reversed(list(s))))
+
+    def reverseString_344_V2(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        return s[::-1]
+
 
 
 
@@ -275,8 +289,9 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    for i in range(1, 13):
-        print(i,"---------",s.numSquares_279(i))
+    print s.reverseString_344('asdfgfhjjk')
+    # for i in range(1, 13):
+    #     print(i,"---------", s.numSquares_279_V1(i))
 
 
 

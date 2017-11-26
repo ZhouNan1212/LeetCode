@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import collections
 import sys
+import math
+
 
 class Solution(object):
     def complexNumberMultiply_537_V1(self, a, b):
@@ -181,6 +183,7 @@ class Solution(object):
         for c in expression:
             if c in '+-':
                 if part:
+                    print "--------"
                     fractions.append(part)
                 part = ''
             part += c
@@ -196,6 +199,73 @@ class Solution(object):
 
         return '%s/%s' % (HI / GCD, LO / GCD)
 
+    """
+    *****************************
+    """
+    def numSquares_279_V1(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n < 1:
+            return 0
+        re = [0] * (n + 1)
+        for i in range(1, n + 1):
+            tmp = sys.maxint
+            j = 1
+            while j * j <= i:
+
+                tmp = min(tmp, re[i - j * j] + 1)
+                print re, i, j * j, re[i - j * j] + 1, tmp
+                j += 1
+            re[i] = tmp
+        return re[n]
+
+    def numSquares_279_V2(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n == 1:
+            return 1
+        while n & 3 == 0:
+            n >>= 2
+        if n & 7 == 7:
+            return 4
+        k = int(math.sqrt(n))
+        halfk = int(math.sqrt(n/2))
+        if k**2 == n:
+            return 1
+        for j in range(k, halfk-1, -1):
+            remain = n - j**2
+            remaink = int(math.sqrt(remain))
+            if remaink**2 == remain:
+                return 2
+        return 3
+
+    def numSquares_279_V3(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        while n % 4 == 0:  n /= 4
+
+        if n % 8 == 7: return 4
+
+        a = 0
+        while a * a <= n:
+            b = (math.sqrt(n - a * a))
+            b = int(b)
+
+            if a * a + b * b == n:
+                if b == 0 or a == 0: return 1
+                return 2
+            a += 1
+        return 3
+
+
+
+
 
 
 
@@ -205,7 +275,8 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.fractionAddition_592("-1/2-1/2"))
+    for i in range(1, 13):
+        print(i,"---------",s.numSquares_279(i))
 
 
 

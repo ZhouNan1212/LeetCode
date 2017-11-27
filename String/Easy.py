@@ -88,8 +88,17 @@ class Solution(object):
                 return False
         return len(re) == 0
 
+    def checkRecord_551(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        # return (s.count('A') <= 1) and ('LLL' not in s)
+        return not any((s.count("A") > 1, "LLL" in s))
+
+
 
 
 if __name__ == '__main__':
     s = Solution()
-    print s.isValid_20('')
+    print s.checkRecord_551("PPALLALA")

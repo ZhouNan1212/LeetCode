@@ -47,8 +47,23 @@ class Solution(object):
                 return False
         return True
 
+    def compress_443(self, chars):
+        """
+        :type chars: List[str]
+        :rtype: int
+        """
+        count = {a: chars.count(a) for a in set(chars)}  # 字典推导式
+        re = 0
+        for value in count.values():
+            if value > 1:
+                re += 2
+            else:
+                re += 1
+        return re
+
+
 
 
 if __name__ == '__main__':
     s = Solution()
-    print s.canConstruct_383("ab", "aab")
+    print s.compress_443(["a","a","b","b","c","c","c"])

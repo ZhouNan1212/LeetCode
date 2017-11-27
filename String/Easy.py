@@ -73,7 +73,23 @@ class Solution(object):
         """
         return len(filter(lambda x: len(x) > 0, s.split(' ')))
 
+    def isValid_20(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if len(s) % 2 != 0:
+            return False
+        re, pattern = [], {")": "(", "]": "[", "}": "{"}
+        for char in s:
+            if char in ["(", "[", "{"]:
+                re.append(char)
+            elif len(re) == 0 or (len(re) > 0 and pattern[char] != re.pop()):
+                return False
+        return len(re) == 0
+
+
 
 if __name__ == '__main__':
     s = Solution()
-    print s.countSegments_434('as as')
+    print s.isValid_20('')

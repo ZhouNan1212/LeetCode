@@ -35,6 +35,20 @@ class Solution(object):
         return " ".join(map(lambda n: n[::-1], s.split(' ')))  # 这里用列表推导式也可以
         # return " ".join([n[::-1] for n in s.split(' ')])
 
+    def canConstruct_383(self, ransomNote, magazine):
+        """
+        :type ransomNote: str
+        :type magazine: str
+        :rtype: bool
+        """
+        letters = set(ransomNote)
+        for i in letters:
+            if ransomNote.count(i) > magazine.count(i):
+                return False
+        return True
+
+
+
 if __name__ == '__main__':
     s = Solution()
-    print s.reverseWords_557("Let's take LeetCode contest")
+    print s.canConstruct_383("ab", "aab")

@@ -47,23 +47,33 @@ class Solution(object):
                 return False
         return True
 
-    def compress_443(self, chars):
+    def compress_443_V1(self, chars):
         """
         :type chars: List[str]
         :rtype: int
         """
+        """
+        这题的OJ系统判断很奇怪，并没有检查返回的整数是否正确，而是检查chars是否正确
+        """
         count = {a: chars.count(a) for a in set(chars)}  # 字典推导式
-        re = 0
-        for value in count.values():
-            if value > 1:
-                re += 2
+        letter_sort = sorted(count.iteritems(), key=lambda d: d[0])
+        re = []
+        for x, y in letter_sort:
+            if y > 1:
+                re.append(x)
+                re += list(str(y))
             else:
-                re += 1
-        return re
+                re.append(x)
+        return len(re)
 
-
+    def countSegments_434(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        return len(filter(lambda x: len(x) > 0, s.split(' ')))
 
 
 if __name__ == '__main__':
     s = Solution()
-    print s.compress_443(["a","a","b","b","c","c","c"])
+    print s.countSegments_434('as as')

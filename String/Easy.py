@@ -96,9 +96,17 @@ class Solution(object):
         # return (s.count('A') <= 1) and ('LLL' not in s)
         return not any((s.count("A") > 1, "LLL" in s))
 
-
+    def lengthOfLastWord_58(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        a = [i for i in s.split(' ') if i not in [' ', '']]
+        if len(a) == 0:
+            return 0
+        return len(a[-1])
 
 
 if __name__ == '__main__':
     s = Solution()
-    print s.checkRecord_551("PPALLALA")
+    print s.lengthOfLastWord_58("a b ")

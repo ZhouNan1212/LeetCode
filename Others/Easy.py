@@ -32,10 +32,41 @@ class Solution(object):
         """
         return bin(x ^ y).count('1')
 
+    def totalHammingDistance_477_V1(self, nums):  # Time Limit Exceeded
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        index, length, count = 0, len(nums), 0
+        while index < length:
+            second_index = index + 1
+            while second_index < length:
+                count += bin(nums[index] ^ nums[second_index]).count('1')
+                second_index += 1
+            index += 1
+        return count
+
+    def totalHammingDistance_477_V2(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        ans = 0
+        for x in range(32):
+            mask = 1 << x
+            zero = one = 0
+            for num in nums:
+                if num & mask:
+                    one += 1
+                else:
+                    zero += 1
+            ans += zero * one
+        return ans
+
 
 
 
 if __name__ == '__main__':
     s = Solution()
-    print s.hammingDistance_461_V1(1, 4)
+    print s.totalHammingDistance_477_V2([4, 14, 2])
 

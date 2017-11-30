@@ -82,8 +82,20 @@ class Solution(object):
             i <<= 1
         return (i - 1) ^ num
 
+    def getSum_371(self, a, b):
+        """
+        :type a: int
+        :type b: int
+        :rtype: int
+        """
+        while b != 0:
+            carry = a & b
+            a = (a ^ b) % 0x100000000
+            b = (carry << 1) % 0x100000000
+        return a if a <= 0x7FFFFFFF else a | (~0x100000000 + 1)
+
 
 if __name__ == '__main__':
     s = Solution()
-    print s.findComplement_476_V1(1)
+    print s.getSum_371(-1, 4)
 

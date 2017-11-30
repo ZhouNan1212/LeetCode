@@ -63,10 +63,27 @@ class Solution(object):
             ans += zero * one
         return ans
 
+    def findComplement_476_V1(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        re = ""
+        for i in list(bin(num).replace("0b", '')):
+            if int(i) == 0:
+                re += "1"
+            else:
+                re += "0"
+        return int(re, 2)
 
+    def findComplement_476_V2(self, num):
+        i = 1
+        while i <= num:
+            i <<= 1
+        return (i - 1) ^ num
 
 
 if __name__ == '__main__':
     s = Solution()
-    print s.totalHammingDistance_477_V2([4, 14, 2])
+    print s.findComplement_476_V1(1)
 

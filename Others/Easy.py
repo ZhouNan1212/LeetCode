@@ -148,8 +148,20 @@ class Solution(object):
                     second_index += 1
         return re
 
-
-
+    def nextGreaterElements_503(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        stack = []
+        size = len(nums)
+        ans = [-1] * size
+        for x in range(size * 2):
+            i = x % size
+            while stack and nums[stack[-1]] < nums[i]:
+                ans[stack.pop()] = nums[i]
+            stack.append(i)
+        return ans
 
 
 class TreeNode(object):
@@ -161,5 +173,5 @@ class TreeNode(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.nextGreaterElement_496_V2([4,1,2], [1,2,3,4])
+    print s.nextGreaterElements_503([1,2,3,4,3])
 

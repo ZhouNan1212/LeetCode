@@ -94,8 +94,72 @@ class Solution(object):
             b = (carry << 1) % 0x100000000
         return a if a <= 0x7FFFFFFF else a | (~0x100000000 + 1)
 
+    def averageOfLevels_637(self, root):
+        """
+        :type root: TreeNode
+        :rtype: List[float]
+        """
+        ans = []
+        que = [root]
+        while que:
+            ans.append(1.0 * sum([n.val for n in que]) / len(que))
+            nque = []
+            for n in que:
+                if n.left: nque.append(n.left)
+                if n.right: nque.append(n.right)
+            que = nque
+        return ans
+
+    def nextGreaterElement_496_V1(self, findNums, nums):  # Time Limit Exceeded
+        """
+        :type findNums: List[int]
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        re = []
+        for index, value in enumerate(findNums):
+            index_list = filter(lambda x: nums[x] > value and x >= nums.index(value), range(len(nums)))
+            if len(index_list) == 0:
+                re.append(-1)
+            else:
+                re.append(nums[index_list[0]])
+        return re
+
+    def nextGreaterElement_496_V2(self, findNums, nums):
+        """
+        :type findNums: List[int]
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        re, second_length = [], len(nums)
+        for value in findNums:
+            second_index = nums.index(value) + 1
+            if second_index > second_length - 1:
+                re.append(-1)
+                continue
+            while second_index < second_length:
+                if nums[second_index] > value:
+                    re.append(nums[second_index])
+                    break
+                elif second_index == second_length - 1:
+                    re.append(-1)
+                    break
+                else:
+                    second_index += 1
+        return re
+
+
+
+
+
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
 
 if __name__ == '__main__':
     s = Solution()
-    print s.getSum_371(-1, 4)
+    print s.nextGreaterElement_496_V2([4,1,2], [1,2,3,4])
 

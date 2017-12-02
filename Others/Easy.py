@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+import itertools
+
+
 class Solution(object):
     def hammingDistance_461_V1(self, x, y):
         """
@@ -236,6 +239,72 @@ class Solution(object):
                 cookie_index += 1
         return friend_index
 
+    def readBinaryWatch_401_V1(self, num):
+        """
+        :type num: int
+        :rtype: List[str]
+        """
+        hour_led_num, times = 0, []
+        while hour_led_num < 4 and hour_led_num <= num:
+            hour_led_places = list(itertools.combinations(range(4), hour_led_num))
+            minute_led_places = list(itertools.combinations(range(6), num - hour_led_num))
+            for hour_led in hour_led_places:
+                hour = ['0', '0', '0', '0']
+
+                for i in hour_led:
+                    hour[i] = '1'
+                num_hour = int("".join(hour), 2)
+
+                if num_hour > 11:
+                    continue
+                else:
+                    str_hour = str(num_hour)
+
+                for minute_led in minute_led_places:
+                    minute = ['0', '0', '0', '0', '0', '0']
+
+                    for j in minute_led:
+                        minute[j] = '1'
+                    num_minute = int("".join(minute), 2)
+
+                    if num_minute > 59:
+                        continue
+                    elif num_minute < 10:
+                        str_minute = '0' + str(num_minute)
+                    else:
+                        str_minute = str(num_minute)
+
+                    times.append(str_hour + ':' + str_minute)
+            hour_led_num += 1
+        return times
+
+    def readBinaryWatch_401_V2(self, num):
+        """
+        :type num: int
+        :rtype: List[str]
+        """
+        return ["%d:%02d" % (h, m) for h in range(12) for m in range(60) if (bin(h) + bin(m)).count('1') == num]
+
+    def readBinaryWatch_401_V3(self, num):
+        """
+        :type num: int
+        :rtype: List[str]
+        """
+        output = []
+        for i in xrange(12):
+            for j in xrange(60):
+                n = bin(i * 64 + j)
+                if n.count('1') == num:
+                    output += "%d:%02d" % (i, j),
+        return output
+
+
+
+
+
+
+
+
 
 
 
@@ -249,5 +318,5 @@ class TreeNode(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.findContentChildren_455_V2([1,2,3], [1,2,3])
+    print s.readBinaryWatch_401_V2(2)
 

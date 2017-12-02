@@ -202,6 +202,43 @@ class Solution(object):
                 score.append(int(c))
         return sum(score)
 
+    def findContentChildren_455_V1(self, g, s):  # Time Limit Exceeded
+        """
+        :type g: List[int]
+        :type s: List[int]
+        :rtype: int
+        """
+        re, s = 0, sorted(s)
+        for num in g:
+            index = 0
+            while index < len(s):
+                if s[index] >= num:
+                    re += 1
+                    s.remove(s[index])
+                    break
+                else:
+                    index += 1
+        return re
+
+    def findContentChildren_455_V2(self, g, s):
+        """
+        :type g: List[int]
+        :type s: List[int]
+        :rtype: int
+        """
+        friend_index, cookie_index, s, g = 0, 0, sorted(s), sorted(g)
+        friend_num, cookie_num = len(g), len(s)
+        while cookie_index < cookie_num and friend_index < friend_num:
+            if s[cookie_index] >= g[friend_index]:
+                cookie_index += 1
+                friend_index += 1
+            else:
+                cookie_index += 1
+        return friend_index
+
+
+
+
 
 class TreeNode(object):
     def __init__(self, x):
@@ -212,5 +249,5 @@ class TreeNode(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.calPoints_682_V1(["5","-2","4","C","D","9","+","+"])
+    print s.findContentChildren_455_V2([1,2,3], [1,2,3])
 

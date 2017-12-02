@@ -163,6 +163,45 @@ class Solution(object):
             stack.append(i)
         return ans
 
+    def calPoints_682_V1(self, ops):
+        """
+        :type ops: List[str]
+        :rtype: int
+        """
+        re, score = 0, []
+        for index, value in enumerate(ops):
+            if value.isdigit() or value.replace("-", '').isdigit():
+                re += int(value)
+                score.append(int(value))
+            elif value == "C":
+                re -= score.pop()
+            elif value == "D":
+                mid = score[-1] * 2
+                re += mid
+                score.append(mid)
+            elif value == "+":
+                mid = score[-1] + score[-2]
+                re += mid
+                score.append(mid)
+        return re
+
+    def calPoints_682_V2(self, ops):
+        """
+        :type ops: List[str]
+        :rtype: int
+        """
+        score = []
+        for c in ops:
+            if c == 'C':
+                score.pop()
+            elif c == 'D':
+                score.append(score[-1] * 2)
+            elif c == '+':
+                score.append(score[-1] + score[-2])
+            else:
+                score.append(int(c))
+        return sum(score)
+
 
 class TreeNode(object):
     def __init__(self, x):
@@ -173,5 +212,5 @@ class TreeNode(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.nextGreaterElements_503([1,2,3,4,3])
+    print s.calPoints_682_V1(["5","-2","4","C","D","9","+","+"])
 

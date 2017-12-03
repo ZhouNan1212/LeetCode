@@ -321,6 +321,10 @@ class Solution(object):
                 return False
         return True
 
+    def reverseBits_190(self, n):
+        str_bin = list(bin(n)[2:].zfill(32))
+        return int("".join(str_bin[::-1]), 2)
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -330,5 +334,5 @@ class TreeNode(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.hasAlternatingBits_693(7)
+    print s.reverseBits_190(1)
 

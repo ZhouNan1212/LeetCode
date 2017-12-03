@@ -246,7 +246,7 @@ class Solution(object):
         """
         hour_led_num, times = 0, []
         while hour_led_num < 4 and hour_led_num <= num:
-            hour_led_places = list(itertools.combinations(range(4), hour_led_num))
+            hour_led_places = list(itertools.combinations(range(4), hour_led_num))  # 生成组合
             minute_led_places = list(itertools.combinations(range(6), num - hour_led_num))
             for hour_led in hour_led_places:
                 hour = ['0', '0', '0', '0']
@@ -298,16 +298,28 @@ class Solution(object):
                     output += "%d:%02d" % (i, j),
         return output
 
+    def hasAlternatingBits_693_V1(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        str_bin, index = list(bin(n).replace("0b", '')), 0
+        while index < len(str_bin):
+            if (index % 2 == 0 and str_bin[index] != '1') or (index % 2 == 1 and str_bin[index] != '0'):
+                return False
+            index += 1
+        return True
 
-
-
-
-
-
-
-
-
-
+    def hasAlternatingBits_693_V2(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        b = bin(n)[2:]
+        for i in xrange(1, len(b)):
+            if b[i] == b[i - 1]:
+                return False
+        return True
 
 class TreeNode(object):
     def __init__(self, x):
@@ -318,5 +330,5 @@ class TreeNode(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.readBinaryWatch_401_V2(2)
+    print s.hasAlternatingBits_693(7)
 

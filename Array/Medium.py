@@ -559,6 +559,35 @@ class Solution(object):
             res += [item + [num] for item in res]
         return res
 
+    def findPeakElement_162(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        index, length = 1, len(nums)
+        while index < length - 1:
+            if nums[index - 1] < nums[index] > nums[index + 1]:
+                return index
+            else:
+                index += 1
+        if nums[0] > nums[-1]:
+            return 0
+        else:
+            return length - 1
+
+    def leastInterval_621(self, tasks, n):
+        """
+        :type tasks: List[str]
+        :type n: int
+        :rtype: int
+        """
+        """
+        数组元素计数并排序输出字典
+        """
+        count = sorted({x: tasks.count(x) for x in set(tasks)}.iteritems(), key=lambda d: d[1])
+
+
+
 
 class NumArrayV1(object):
     def __init__(self, nums):
@@ -593,6 +622,8 @@ class NumArrayV1(object):
             return sums[j] - sums[i - 1]
 
 
+
+
 class NumArrayV2(object):
     def __init__(self, nums):
         """
@@ -617,4 +648,7 @@ if __name__ == '__main__':
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]) )
     # obj = NumArrayV2([-2, 0, 3, -5, 2, -1])
     # param_1 = obj.sumRange(2, 5)
-    print(s.combinationSum2([14,6,25,9,30,20,33,34,28,30,16,12,31,9,9,12,34,16,25,32,8,7,30,12,33,20,21,29,24,17,27,34,11,17,30,6,32,21,27,17,16,8,24,12,12,28,11,33,10,32,22,13,34,18,12],27))
+    print(s.findPeakElement_162([1,2,3,1]))
+
+
+

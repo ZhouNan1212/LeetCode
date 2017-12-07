@@ -91,22 +91,22 @@ if __name__ == "__main__":
     # 因为操作系统自动把当前进程（父进程）复制了一份（子进程），然后，分别在父进程和子进程内返回。
     # 子进程永远返回 0，而父进程返回子进程的 ID。
     # """
-    # pid = os.fork()
-    # if pid == 0:
-    #     print('I am child process (%s) and my parent is %s.' % (os.getpid(), os.getppid()))
-    # else:
-    #     print('I (%s) just created a child process (%s).' % (os.getpid(), pid))
+    pid = os.fork()
+    if pid == 0:
+        print('I am child process (%s) and my parent is %s.' % (os.getpid(), os.getppid()))
+    else:
+        print('I (%s) just created a child process (%s).' % (os.getpid(), pid))
 
-    # print('Parent process %s.' % os.getpid())
-    # """
-    # 创建子进程时，只需要传入一个执行函数和函数的参数（target 指定了进程要执行的函数，args 指定了参数）。
-    # 创建好进程 Process 的实例后，使用 start() 方法启动。join() 方法可以等待子进程结束后再继续往下运行，通常用于进程间的同步。
-    # """
-    p = multiprocessing.Process(target=run_proc, args=('test',))
-    print('Child process will start.')
-    p.start()
-    p.join()
-    print('Child process end.')
+    print('Parent process %s.' % os.getpid())
+    """
+    创建子进程时，只需要传入一个执行函数和函数的参数（target 指定了进程要执行的函数，args 指定了参数）。
+    创建好进程 Process 的实例后，使用 start() 方法启动。join() 方法可以等待子进程结束后再继续往下运行，通常用于进程间的同步。
+    """
+    # p = multiprocessing.Process(target=run_proc, args=('test',))
+    # print('Child process will start.')
+    # p.start()
+    # p.join()
+    # print('Child process end.')
 
 
 

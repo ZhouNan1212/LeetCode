@@ -3,6 +3,8 @@ class Node(object):
     def __init__(self,data,p=0):
         self.data = data
         self.next = p
+
+
 class LinkList(object):
     def __init__(self):
          self.head = 0

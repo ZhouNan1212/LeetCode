@@ -291,8 +291,8 @@ class Solution(object):
         :rtype: List[str]
         """
         output = []
-        for i in xrange(12):
-            for j in xrange(60):
+        for i in range(12):
+            for j in range(60):
                 n = bin(i * 64 + j)
                 if n.count('1') == num:
                     output += "%d:%02d" % (i, j),
@@ -316,7 +316,7 @@ class Solution(object):
         :rtype: bool
         """
         b = bin(n)[2:]
-        for i in xrange(1, len(b)):
+        for i in range(1, len(b)):
             if b[i] == b[i - 1]:
                 return False
         return True
@@ -334,5 +334,5 @@ class TreeNode(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.reverseBits_190(1)
+    print(s.reverseBits_190(1))
 

@@ -265,9 +265,18 @@ class Solution(object):
                 total_time += min(timeSeries[index + 1] - timeSeries[index], duration)
             return total_time + duration
 
+
+def test(a):
+    a[0] = 1
+
+
 if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print(s.findPoisonedDuration([1, 2], 2))
+    # print(s.findPoisonedDuration([1, 2], 2))
+    a = [2,2,3,4]
+    test(a)
+    print(a)
+
 

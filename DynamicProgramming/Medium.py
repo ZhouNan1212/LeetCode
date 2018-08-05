@@ -13,7 +13,6 @@ class Solution(object):
         dp = [[0] * length] * length
         for i in reversed(range(length)):
             for j in range(i, length):
-                print dp
                 dp[i][j] = ((s[i] == s[j]) and (j - i < 3 or dp[i + 1][j - 1]))
                 if dp[i][j] is True:
                     res += 1
@@ -50,17 +49,17 @@ class Solution(object):
         for i in range(2, n + 1):
             num, count2, index = i, 1, 0
             while num > 0:
-                print num, "+++++++++"
+                print(num, "+++++++++")
                 if num == 1:
-                    print index, "=========", count2
+                    print(index, "=========", count2)
                     count2 *= (9 - index + 2)
                 else:
                     count2 *= (9 - index)
-                    print count2, "--------"
+                    print(count2, "--------")
                 index += 1
                 num -= 1
                 count1 += count2
-        print count1 + 10
+        print(count1 + 10)
 
 
 

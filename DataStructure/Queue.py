@@ -30,18 +30,14 @@ class Queue(object):  # 无限长队列，这里可以设置队列长度
         del self.items[0]
         return first
 
+
 if __name__ == "__main__":
     s = Queue()
     s.enqueue(1)
     s.enqueue(2)
     s.enqueue(3)
-    print s.size()
-    print s.is_empty()
-    print s.queue_first(), s.queue_last()
 
     s.dequeue()
-    print s.queue_first()
-    print s.size()
 
 
 

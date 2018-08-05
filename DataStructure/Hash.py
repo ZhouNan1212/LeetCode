@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 class LinearMap(object):
     """
     线性表结构
@@ -73,7 +74,7 @@ if __name__ == "__main__":
     linearMap.add(1, ["History"])
     linearMap.add(1, "Math")
     linearMap.add(1, "English")
-    print linearMap.get(1)
+    print(linearMap.get(1))
 
     table = BetterMap()
     pricedata = [("Hohner257", 257),

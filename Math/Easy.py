@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import math
-
+from functools import reduce
 
 class Solution(object):
     def addDigits_258_V1(self, num):
@@ -100,7 +100,7 @@ class Solution(object):
             if each_digit[index] > 9:
                 each_digit[index - 1] += each_digit[index] / 10
                 each_digit[index] = each_digit[index] % 10
-                print each_digit[index - 1]
+                print(each_digit[index - 1])
             index -= 1
         return "".join(map(str, each_digit))
 
@@ -195,7 +195,7 @@ class Solution(object):
             if num[index] > 1:
                 num[index - 1] += num[index] / 2
                 num[index] = num[index] % 2
-                print num[index - 1]
+                print(num[index - 1])
             index -= 1
         num[0] = str(bin(num[0]))[2:]
         return "".join(map(str, num))
@@ -283,7 +283,7 @@ class Solution(object):
             return False
         while num % 4 == 0:
             num /= 4
-            print num
+            print(num)
         return True if num == 1 else False
 
     def arrangeCoins_441(self, n):

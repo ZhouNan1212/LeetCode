@@ -117,7 +117,7 @@ class Solution(object):
         chr()主要用来表示ascii码对应的字符他的输入时数字，可以用十进制，也可以用十六进制。
         """
         result = ord(s[0]) ^ ord(t[0])
-        for i in xrange(1, len(s)):
+        for i in range(1, len(s)):
             result ^= ord(s[i]) ^ ord(t[i])
 
         return chr(result ^ ord(t[-1]))
@@ -213,7 +213,7 @@ class Solution(object):
             heapq.heappush(heap, pair)
 
         result = []
-        for _ in xrange(k):
+        for _ in range(k):
             num = heapq.heappop(heap)[1]
             result.append(num)
         return result
@@ -307,7 +307,7 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-        print set(zip(s, t)), zip(s, t)
+        print(set(zip(s, t)), zip(s, t))
         return len(set(zip(s, t))) == len(set(s)) == len(set(t))
 
     def isIsomorphicV3(self, s, t):
@@ -451,7 +451,7 @@ class Solution(object):
         """
         r = [0] * 26
         for i in s1:
-            print ord(i), ord('a')
+            print(ord(i), ord('a'))
             r[ord(i) - ord('a')] += 1
 
         r1 = [0] * 26
@@ -592,7 +592,7 @@ class Solution(object):
         else:
             traversal_dict = nums1_histogram
             search_dict = nums2_histogram
-        print traversal_dict, '\n', search_dict
+        print(traversal_dict, '\n', search_dict)
         for key in traversal_dict.keys():
             if key in search_dict:
                 re += [key] * min(search_dict[key], traversal_dict[key])

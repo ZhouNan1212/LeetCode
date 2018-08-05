@@ -25,7 +25,7 @@ class Solution(object):
         left, right, count_class, re = 0, 1, [0]*len(nums), [0, len(complete_list)]
         count_class[complete_list[left][0]] += 1
         count_class[complete_list[right][0]] += 1
-        print complete_list
+        print(complete_list)
 
         while left < len(complete_list) - 1:
             if 0 in count_class:

@@ -2,7 +2,7 @@
 import collections
 import sys
 import math
-
+from functools import reduce
 
 class Solution(object):
     def complexNumberMultiply_537_V1(self, a, b):
@@ -135,7 +135,7 @@ class Solution(object):
             [3] + [3 * i for i in range(1, n) if i % 2 != 0 and (i % 3 == 0 or i % 5 == 0)],  # three_ugly_number
             [5] + [5 * i for i in range(1, n) if i % 2 != 0 and i % 3 != 0 and i % 5 == 0]]  # five_ugly_number
         length, index, count, merge_index, re = len(ugly_number), [0] * len(ugly_number), 0, 0, 0
-        print ugly_number
+        print(ugly_number)
         re = []
         while count < n:
             merge = [ugly_number[i][index[i]] if index[i] < len(ugly_number[i]) else MAX_INT for i in range(length)]
@@ -143,7 +143,7 @@ class Solution(object):
             re.append(ugly_number[merge_index][index[merge_index]])
 
             index[merge_index] += 1
-            print merge, '-------------------', merge_index, '==========', index,'++++++',re
+            print(merge, '-------------------', merge_index, '==========', index,'++++++',re)
 
             count += 1
         return ugly_number[merge_index][index[merge_index] - 1]
@@ -183,7 +183,7 @@ class Solution(object):
         for c in expression:
             if c in '+-':
                 if part:
-                    print "--------"
+                    print("--------")
                     fractions.append(part)
                 part = ''
             part += c
@@ -216,7 +216,7 @@ class Solution(object):
             while j * j <= i:
 
                 tmp = min(tmp, re[i - j * j] + 1)
-                print re, i, j * j, re[i - j * j] + 1, tmp
+                print(re, i, j * j, re[i - j * j] + 1, tmp)
                 j += 1
             re[i] = tmp
         return re[n]
@@ -293,7 +293,7 @@ if __name__ == '__main__':
     s = Solution()
     #print(s.getRowV2(3))
     #print(s.removeDuplicatesV2([1, 1, 2, 2, 3]))
-    print s.reverseVowels_345("leetcode")
+    print(s.reverseVowels_345("leetcode"))
     # for i in range(1, 13):
     #     print(i,"---------", s.numSquares_279_V1(i))
 

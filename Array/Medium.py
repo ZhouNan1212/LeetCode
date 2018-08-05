@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from math import factorial
 import string
+from functools import reduce
 
 class Solution(object):
     def constructArray(self, n, k):
@@ -102,7 +103,7 @@ class Solution(object):
         res = 0
         for num in nums:
             res ^= num
-            print res
+            print(res)
         return res
 
     def firstMissingPositiveV1(self, nums):
@@ -156,7 +157,7 @@ class Solution(object):
     def subsetsV2(self, nums):  # 回溯法
         res = [[]]
         for num in sorted(nums):
-            print res
+            print(res)
             res += [item + [num] for item in res]
         return res
 
@@ -242,7 +243,7 @@ class Solution(object):
         subarray_sum, cumulative_sum, res = {0: 1}, 0, 0
         for index, value in enumerate(nums):
             cumulative_sum += value
-            print cumulative_sum, subarray_sum, cumulative_sum - k
+            print(cumulative_sum, subarray_sum, cumulative_sum - k)
             if cumulative_sum not in subarray_sum.keys():
                 subarray_sum[cumulative_sum] = index
             else:
@@ -351,7 +352,7 @@ class Solution(object):
             return sum(nums)
         prev, curr = 0, 0
         for i in range(len(nums)):
-            print prev + nums[i]
+            print(prev + nums[i])
             prev, curr = curr, max(prev + nums[i], curr)
         return curr
 
@@ -383,7 +384,7 @@ class Solution(object):
         result = [0]
         k = 0
         while 2**k <= num:
-            print [n + 1 for n in result]
+            print([n + 1 for n in result])
             result += [n + 1 for n in result]
             k += 1
         return result[:num+1]
@@ -407,11 +408,11 @@ class Solution(object):
         if not matrix:
             return
         m = len(matrix)
-        for i in xrange(m):
-            for j in xrange(i):
+        for i in range(m):
+            for j in range(i):
                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-        for i in xrange(m):
-            for j in xrange(m / 2):
+        for i in range(m):
+            for j in range(int(m / 2)):
                 matrix[i][j], matrix[i][m - j - 1] = matrix[i][m - j - 1], matrix[i][j]
 
     def removeDuplicatesV1(self, nums):
@@ -553,7 +554,7 @@ class Solution(object):
         """
         nums = filter(lambda x: x <= target, candidates)
         nums.sort()
-        print nums
+        print(nums)
         res = [[]]
         for num in nums:
             res += [item + [num] for item in res]
@@ -602,7 +603,7 @@ class NumArrayV1(object):
             self.sums = [0] * len(nums)
         for i in range(len(nums)):
             self.sums[i] = self.sums[i - 1] + nums[i]
-            print nums[i], self.sums
+            print(nums[i], self.sums)
 
     def sumRange(self, i, j):
         """
@@ -611,7 +612,7 @@ class NumArrayV1(object):
         :rtype: int
         """
         sums = self.sums
-        print sums
+        print(sums)
         if sums is None:
             return 0
         if i >= len(sums) or j >= len(sums) or i > j:

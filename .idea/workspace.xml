@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f99bdec9-cebd-4412-8566-04bd2f7c7744" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/LeetCode.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HashTable/Easy.py" afterPath="$PROJECT_DIR$/HashTable/Easy.py" />
+    <list default="true" id="f99bdec9-cebd-4412-8566-04bd2f7c7744" name="Default" comment="Student Attendance Record I">
+      <change beforePath="$PROJECT_DIR$/.idea/LeetCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LeetCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataStructure/Processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructure/Processing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,18 +16,131 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="-292737158">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+          <entry key="py" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="143" />
+          <entry key="txt" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="143" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="LeetCode" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Easy.py" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Others/Easy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="336" column="31" selection-start-line="336" selection-start-column="31" selection-end-line="336" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="344" column="30" selection-start-line="344" selection-start-column="30" selection-end-line="344" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="-564">
+              <caret line="594" column="48" selection-start-line="594" selection-start-column="48" selection-end-line="594" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HashTable/Hard.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataStructure/Processing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+              <folding>
+                <element signature="e#24#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Math/Easy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-125">
+              <caret line="292" column="11" lean-forward="true" selection-start-line="292" selection-start-column="11" selection-end-line="292" selection-end-column="11" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Math/Medium.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+              <folding>
+                <element signature="e#24#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DynamicProgramming/Medium.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/String/Easy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1336">
+              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="6" selection-start-column="6" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -50,6 +160,14 @@
       <find>subset</find>
       <find>combination</find>
       <find>Combinationsum3</find>
+      <find>intersect</find>
+      <find>字</find>
+      <find>字典推导式</find>
+      <find>字典推导</find>
+      <find>字典</find>
+      <find>默</find>
+      <find>默认</find>
+      <find>count</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -63,68 +181,87 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Array/Easy.py" />
+        <option value="$PROJECT_DIR$/Array/LinkList.py" />
         <option value="$PROJECT_DIR$/Array/Medium.py" />
         <option value="$PROJECT_DIR$/DataStructure/Hash.py" />
+        <option value="$PROJECT_DIR$/DataStructure/Queue.py" />
+        <option value="$PROJECT_DIR$/DataStructure/Stack.py" />
+        <option value="$PROJECT_DIR$/DynamicProgramming/Medium.py" />
         <option value="$PROJECT_DIR$/HashTable/Easy.py" />
+        <option value="$PROJECT_DIR$/HashTable/Hard.py" />
+        <option value="$PROJECT_DIR$/Math/Easy.py" />
+        <option value="$PROJECT_DIR$/Math/Medium.py" />
+        <option value="$PROJECT_DIR$/Others/Easy.py" />
+        <option value="$PROJECT_DIR$/String/Easy.py" />
+        <option value="$PROJECT_DIR$/DataStructure/Processing.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="36" />
+    <option name="y" value="240" />
+    <option name="width" value="1856" />
     <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetCode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamicProgramming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="HashTable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Math" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="Others" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LeetCode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LeetCode" type="462c0819:PsiDirectoryNode" />
+              <item name="String" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -146,7 +283,30 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.Easy">
-    <configuration default="false" name="Medium" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Easy (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Others" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Others/Easy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Easy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -157,30 +317,40 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LeetCode" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Array/Medium.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Array/Easy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="Easy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Medium" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HashTable" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Array" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LeetCode" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HashTable/Easy.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Array/Medium.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="Hash" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Processing" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -191,44 +361,51 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LeetCode" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataStructure/Hash.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataStructure/Processing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="Nosetests in Easy.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Array" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="LeetCode" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Array/Easy.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.Medium" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Easy" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Hash" />
+    <list>
+      <item itemvalue="Python.Easy (3)" />
+      <item itemvalue="Python.Medium" />
+      <item itemvalue="Python.Processing" />
+      <item itemvalue="Python tests.Nosetests in Easy.py" />
+      <item itemvalue="Python.Easy" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.Easy" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Hash" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Medium" />
+      <list>
+        <item itemvalue="Python.Easy" />
+        <item itemvalue="Python tests.Nosetests in Easy.py" />
+        <item itemvalue="Python.Processing" />
+        <item itemvalue="Python.Medium" />
+        <item itemvalue="Python.Easy (3)" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -237,90 +414,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509848254669</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Subsets&#10;&#10;思路1：&#10;&#10;位运算&#10;&#10;思路2：&#10;&#10;回溯法">
-      <created>1509850757121</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1509850757121</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Unique Paths&#10;&#10;思路1：&#10;&#10;m个a和n个b的组合，(m+n)!/m!n!">
-      <created>1509864881019</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1509864881019</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Find Minimum in Rotated Sorted Array&#10;&#10;思路1：&#10;&#10;reduce()&#10;&#10;思路2：&#10;&#10;二分法">
-      <created>1509865740371</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1509865740371</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Keyboard Row">
-      <created>1509883793051</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1509883793051</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Range Sum Query - Immutable&#10;&#10;思路：&#10;&#10;sumRange可能会被调用多次，所以构造函数内就计算了从第一个元素到当前元素所有元素的和，保存到数组sums的对应位置中，在函数sumRange中就可以很方便地算出题目中要求的结果了。">
-      <created>1509975245302</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1509975245302</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Counting Bits&#10;&#10;思路：&#10;&#10;位运算">
-      <created>1509977420846</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1509977420846</updated>
-    </task>
-    <task id="LOCAL-00007" summary="merge">
-      <created>1510224551306</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1510224551306</updated>
-    </task>
-    <task id="LOCAL-00008" summary="merge">
-      <created>1510224715668</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1510224715668</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Rotate Image&#10;&#10;思路：&#10;&#10;先对原数组取其转置矩阵，然后把每行的数字翻转">
-      <created>1510228684899</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1510228684899</updated>
-    </task>
-    <task id="LOCAL-00010" summary="实现hash表">
-      <created>1510409126707</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1510409126707</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Distribute Candies">
-      <created>1510412846302</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1510412846302</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Group Anagrams">
-      <created>1510453708601</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1510453708601</updated>
     </task>
     <task id="LOCAL-00013" summary="Valid Anagram">
       <created>1510455334641</created>
@@ -371,8 +464,307 @@
       <option name="project" value="LOCAL" />
       <updated>1510576662213</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="忽略文件">
+      <created>1510661771341</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1510661771341</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Find All Anagrams in a String&#10;&#10;思路：&#10;&#10;利用滑动窗口Sliding Window，左右指针同时右移，从计数字典里左指针对应的字符数量减1，右指针对应的字符数量加1">
+      <created>1510840171802</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1510840171802</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Permutation in String&#10;&#10;思路：&#10;&#10;滑动窗口">
+      <created>1510841502324</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1510841502324</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Happy Number&#10;&#10;思路1：&#10;&#10;用set来记录所有出现过的数字，每出现一个新数字，在set中查找看是否存在，若不存在则加入表中，若存在则跳出循环，并且判断此数是否为1&#10;&#10;思路2：&#10;&#10;非快乐数性质：循环的数字中必定会有4">
+      <created>1510981303272</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1510981303272</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Longest Palindrome">
+      <created>1510993210565</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1510993210565</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Intersection of Two Arrays II">
+      <created>1510996434213</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1510996434213</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Minimum Index Sum of Two Lists">
+      <created>1510998560154</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1510998560154</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Number of Boomerangs">
+      <created>1511061174017</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1511061174017</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add Strings">
+      <created>1511267067131</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1511267067131</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Sum of Square Numbers超时">
+      <created>1511270442927</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1511270442927</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Valid Perfect Square&#10;&#10;思路：&#10;&#10;完全平方数是一系列奇数之和，1+3+...+(2n-1) = (2n-1 + 1)n/2 = n*n">
+      <created>1511356567908</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1511356567908</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Super Pow&#10;&#10;思路：&#10;&#10;1. a^b % 1337 = (a%1337)^b % 1337&#10;2. xy % 1337 = ((x%1337) * (y%1337)) % 1337">
+      <created>1511358886037</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1511358886037</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add Binary&#10;&#10;思路：&#10;&#10;与415题类似，每位相加再处理">
+      <created>1511360781077</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1511360781077</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Arranging Coins">
+      <created>1511444615292</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1511444615292</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Factorial Trailing Zeroes&#10;&#10;思路：&#10;&#10;只需要计算因子中5的个数">
+      <created>1511445283417</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1511445283417</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Complex Number Multiplication">
+      <created>1511521985587</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1511521985587</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Integer to Roman">
+      <created>1511577217104</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1511577217104</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Reconstruct Original Digits from English">
+      <created>1511580099954</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1511580099954</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Ugly Number&#10;&#10;思路：&#10;&#10;只需看该数能否且只能被2，3，5整除">
+      <created>1511583004110</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1511583004110</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Fraction Addition and Subtraction">
+      <created>1511669259978</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1511669259978</updated>
+    </task>
+    <task id="LOCAL-00040" summary="perfect squares&#10;&#10;思路：&#10;&#10;动态规划">
+      <created>1511673156264</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1511673156264</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Reverse String">
+      <created>1511673889937</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1511673889937</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Reverse Vowels of a String&#10;&#10;将字符串中的元音字母逆序">
+      <created>1511674898120</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1511674898120</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Detect Capital">
+      <created>1511678203664</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1511678203664</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Reverse Words in a String III&#10;&#10;列表推导式或map">
+      <created>1511679188520</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1511679188520</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Valid Parentheses">
+      <created>1511784068557</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1511784068557</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Student Attendance Record I">
+      <created>1511785058152</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1511785058153</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Length of Last Word">
+      <created>1511874910526</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1511874910526</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Hamming Distance&#10;&#10;计算两个数的二进制之间的汉明距离">
+      <created>1511956163753</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1511956163753</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Total Hamming Distance&#10;&#10;思路：&#10;&#10;整体的汉明距离就是每列中0的个数乘以1的个数">
+      <created>1511959376971</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1511959376971</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Number Complement&#10;&#10;直接使用按位取反~会将符号标志位也处理了，结果变为负数">
+      <created>1512047201033</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1512047201033</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Sum of Two Integers">
+      <created>1512048068864</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1512048068864</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Next Greater Element I&#10;&#10;思路：&#10;&#10;找出第一个数组中的元素在第二个数组中对应位置的右边的第一个大于它的元素，暴破法">
+      <created>1512140123274</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1512140123274</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Next Greater Element II">
+      <created>1512142859722</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1512142859722</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Baseball Game">
+      <created>1512218327473</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1512218327474</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Assign Cookies&#10;&#10;思路：&#10;&#10;对两个数组进行排序，然后先拿最小的cookie给胃口最小的小朋友，看能否满足，能的话，然后再拿下一个cookie去满足下一位小朋友；如果当前cookie不能满足当前小朋友，那么我们就用下一块稍大一点的cookie去尝试满足当前的小朋友。当cookie发完了或者小朋友没有了停止遍历">
+      <created>1512220185066</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1512220185066</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Binary Watch">
+      <created>1512223908073</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1512223908073</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Binary Number with Alternating Bits">
+      <created>1512270506356</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1512270506357</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Reverse Bits">
+      <created>1512271290711</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1512271290711</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Find Peak Element">
+      <created>1512390654012</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1512390654013</updated>
+    </task>
+    <task id="LOCAL-00060" summary="python多进程原理">
+      <created>1512574184582</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1512574184582</updated>
+    </task>
+    <task id="LOCAL-00061" summary="代码转为3.6版本">
+      <created>1533467628888</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1533467628889</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Nosetests_in_Easy_py - 2018.01.25 at 19h 46m 56s.xml">
+      <configuration name="Nosetests in Easy.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,28 +776,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15938865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293556" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21599045" sideWeight="0.50215983" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22076373" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27159828" sideWeight="0.49784017" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991362" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15925626" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Run" order="3" sideWeight="0.49784017" weight="0.32820785" />
+      <window_info id="Debug" order="4" weight="0.39183456" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.3293556" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50215983" side_tool="true" weight="0.21599045" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.22076373" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Data View" order="3" weight="0.32991362" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -419,322 +821,153 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Subsets&#10;&#10;思路1：&#10;&#10;位运算&#10;&#10;思路2：&#10;&#10;回溯法" />
-    <MESSAGE value="Unique Paths&#10;&#10;思路1：&#10;&#10;m个a和n个b的组合，(m+n)!/m!n!" />
-    <MESSAGE value="Find Minimum in Rotated Sorted Array&#10;&#10;思路1：&#10;&#10;reduce()&#10;&#10;思路2：&#10;&#10;二分法" />
-    <MESSAGE value="Keyboard Row" />
-    <MESSAGE value="Range Sum Query - Immutable&#10;&#10;思路：&#10;&#10;sumRange可能会被调用多次，所以构造函数内就计算了从第一个元素到当前元素所有元素的和，保存到数组sums的对应位置中，在函数sumRange中就可以很方便地算出题目中要求的结果了。" />
-    <MESSAGE value="Counting Bits&#10;&#10;思路：&#10;&#10;位运算" />
-    <MESSAGE value="Rotate Image&#10;&#10;思路：&#10;&#10;先对原数组取其转置矩阵，然后把每行的数字翻转" />
-    <MESSAGE value="实现hash表" />
-    <MESSAGE value="Distribute Candies" />
-    <MESSAGE value="Group Anagrams" />
-    <MESSAGE value="Valid Anagram" />
-    <MESSAGE value="Find the Difference" />
-    <MESSAGE value="Intersection of Two Arrays&#10;&#10;思路：&#10;&#10;将一个数组转化为set，然后看另一个数组中每个元素是否存在于这个set中" />
-    <MESSAGE value="Sort Characters By Frequency" />
-    <MESSAGE value="Top K Frequent Elements 前k个出现频率最大的元素" />
-    <MESSAGE value="Top K Frequent Words&#10;&#10;难点在于同时利用键和值排序，值按逆序，键按升序" />
-    <MESSAGE value="merge" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/ZhouNan1212/LeetCode&#10;&#10;# Conflicts:&#10;#&#9;HashTable/Easy.py" />
-    <MESSAGE value="Merge branch 'master'" />
-    <MESSAGE value="Merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="7" />
-    </breakpoint-manager>
-    <watches-manager />
+    <MESSAGE value="Reconstruct Original Digits from English" />
+    <MESSAGE value="Ugly Number&#10;&#10;思路：&#10;&#10;只需看该数能否且只能被2，3，5整除" />
+    <MESSAGE value="Fraction Addition and Subtraction" />
+    <MESSAGE value="perfect squares&#10;&#10;思路：&#10;&#10;动态规划" />
+    <MESSAGE value="Reverse String" />
+    <MESSAGE value="Reverse Vowels of a String&#10;&#10;将字符串中的元音字母逆序" />
+    <MESSAGE value="Detect Capital" />
+    <MESSAGE value="Reverse Words in a String III&#10;&#10;列表推导式或map" />
+    <MESSAGE value="Valid Parentheses" />
+    <MESSAGE value="Student Attendance Record I" />
+    <MESSAGE value="Length of Last Word" />
+    <MESSAGE value="Hamming Distance&#10;&#10;计算两个数的二进制之间的汉明距离" />
+    <MESSAGE value="Total Hamming Distance&#10;&#10;思路：&#10;&#10;整体的汉明距离就是每列中0的个数乘以1的个数" />
+    <MESSAGE value="Number Complement&#10;&#10;直接使用按位取反~会将符号标志位也处理了，结果变为负数" />
+    <MESSAGE value="Sum of Two Integers" />
+    <MESSAGE value="Next Greater Element I&#10;&#10;思路：&#10;&#10;找出第一个数组中的元素在第二个数组中对应位置的右边的第一个大于它的元素，暴破法" />
+    <MESSAGE value="Next Greater Element II" />
+    <MESSAGE value="Baseball Game" />
+    <MESSAGE value="Assign Cookies&#10;&#10;思路：&#10;&#10;对两个数组进行排序，然后先拿最小的cookie给胃口最小的小朋友，看能否满足，能的话，然后再拿下一个cookie去满足下一位小朋友；如果当前cookie不能满足当前小朋友，那么我们就用下一块稍大一点的cookie去尝试满足当前的小朋友。当cookie发完了或者小朋友没有了停止遍历" />
+    <MESSAGE value="Binary Watch" />
+    <MESSAGE value="Binary Number with Alternating Bits" />
+    <MESSAGE value="Reverse Bits" />
+    <MESSAGE value="Find Peak Element" />
+    <MESSAGE value="python多进程原理" />
+    <MESSAGE value="代码转为3.6版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="代码转为3.6版本" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8019">
-          <caret line="243" column="5" selection-start-line="243" selection-start-column="5" selection-end-line="243" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-645649615/exceptions.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-645649615/__builtin__.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-645649615/_collections.py" />
+    <entry file="file://D:/python2.7/Lib/multiprocessing/process.py" />
+    <entry file="file://D:/python2.7/Lib/multiprocessing/forking.py" />
     <entry file="file://$PROJECT_DIR$/Array/Easy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3102">
-          <caret line="95" column="21" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="21" />
+        <state relative-caret-position="124">
+          <caret line="271" selection-start-line="271" selection-end-line="271" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
+    <entry file="file://$PROJECT_DIR$/Array/LinkList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3102">
-          <caret line="95" column="21" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="132">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Array/Medium.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-16">
+          <caret line="615" column="24" lean-forward="true" selection-start-line="615" selection-start-column="24" selection-end-line="615" selection-end-column="24" />
+          <folding>
+            <element signature="e#24#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
+    <entry file="file://$PROJECT_DIR$/DataStructure/Hash.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataStructure/Stack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="22">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataStructure/Queue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1041">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-645649615/exceptions.py" />
-    <entry file="file://$PROJECT_DIR$/DataStructure/Hash.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-645649615/__builtin__.py" />
-    <entry file="file://$PROJECT_DIR$/DynamicProgramming/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2079">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1755">
-          <caret line="517" column="34" selection-start-line="517" selection-start-column="34" selection-end-line="517" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="291" column="49" selection-start-line="291" selection-start-column="49" selection-end-line="291" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8019">
-          <caret line="243" column="5" selection-start-line="243" selection-start-column="5" selection-end-line="243" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3102">
-          <caret line="95" column="21" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3102">
-          <caret line="95" column="21" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Easy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        <state relative-caret-position="138">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataStructure/Stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataStructure/Queue.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1041">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-645649615/exceptions.py" />
-    <entry file="file://$PROJECT_DIR$/DataStructure/Hash.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/-645649615/__builtin__.py" />
     <entry file="file://$PROJECT_DIR$/DynamicProgramming/Medium.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2079">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Array/Medium.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1755">
-          <caret line="517" column="34" selection-start-line="517" selection-start-column="34" selection-end-line="517" selection-end-column="34" />
+        <state relative-caret-position="22">
+          <caret line="61" column="26" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HashTable/Easy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="344" column="30" selection-start-line="344" selection-start-column="30" selection-end-line="344" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="-564">
+          <caret line="594" column="48" selection-start-line="594" selection-start-column="48" selection-end-line="594" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HashTable/Hard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Math/Easy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="292" column="11" lean-forward="true" selection-start-line="292" selection-start-column="11" selection-end-line="292" selection-end-column="11" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Math/Medium.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <element signature="e#24#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Others/Easy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="336" column="31" selection-start-line="336" selection-start-column="31" selection-end-line="336" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/String/Easy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1336">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataStructure/Processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="77" column="26" lean-forward="true" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
+          <folding>
+            <element signature="e#24#46#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
